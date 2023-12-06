@@ -319,6 +319,7 @@ p.miniHeading {
 .github span {
   display: inline-block;
   font-size: 1.2em;
+  transition: all 0.1s ease-out;
 }
 
 .github:hover {
@@ -326,6 +327,16 @@ p.miniHeading {
   box-shadow: 0 0.2em 0.2em grey;
   transition: all 0.1s ease-out;
   background-color: rgb(30, 30, 30);
+}
+
+.github:hover span {
+  text-shadow: 0 0 0.1em white;
+  transition: all 0.1s ease-out;
+}
+
+.github:active span {
+  text-shadow: none;
+  transition: all 0.1s ease-out;
 }
 
 .github:active {
