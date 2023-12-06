@@ -122,6 +122,7 @@ footer {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 footer section:hover:not(.spacer)  {
@@ -188,12 +189,12 @@ footer section.spacer {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  flex-direction: column;
   flex-basis: 100%;
+  flex-direction: column;
   border: 1px solid lightgrey;
   border-radius: 0.5em;
   text-align: center;
-  transition: all 0.2s ease-out;
+  transition: all 0.1s ease-out;
 }
 
 .fund {
@@ -238,9 +239,9 @@ p.miniHeading {
 
 .sponsor:hover {
   cursor: pointer;
-  transform: scale(1.02);
-  transition: all 0.2s ease-out;
-  background-color: rgba(230, 230, 230, 0.6);
+  transform: scale(1.01);
+  transition: all 0.1s ease-out;
+  background-color: rgba(230, 230, 230, 0.4);
 }
 
 .button {
@@ -258,9 +259,35 @@ p.miniHeading {
 }
 
 .sponsor .info {
-  margin: 0.75em 0.25em;
+  margin: 1em 0.25em;
   display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   flex: 1;
+}
+
+.sponsor a {
+  padding: 0.25em 1em;
+  margin: 1em 0 0 0;
+  display: inline-block;
+  border-radius: 1em;
+  border: 1px solid black;
+  transition: all 0.2s ease-out;
+}
+
+.sponsor a sup {
+  margin: 0.25em;
+  display: inline-block;
+}
+
+.sponsor a:hover {
+  background-color: rgba(211, 211, 211, 0.5);
+  transition: all 0.2s ease-out;
+}
+
+.sponsor a:active {
+  background-color: rgba(211, 211, 211, 0.75);
+  transition: all 0.2s ease-out;
 }
 
 .sponsor.lennard {
