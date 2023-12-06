@@ -226,6 +226,10 @@ p.miniHeading {
   outline: none !important;
 }
 
+.sponsor::selection {
+  background: none;
+}
+
 .button {
   padding: 0.5em;
   border: 1px solid grey;
