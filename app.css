@@ -56,6 +56,10 @@ table {
   box-sizing: border-box;
 }
 
+*:active {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html {
   font-family: 'Lato', sans-serif;
 }
@@ -79,6 +83,7 @@ h1.biaq {
   font-weight: 900;
   flex-basis: 100%;
   align-self: center;
+  margin: 0;
 }
 
 li {
@@ -227,7 +232,6 @@ p.miniHeading {
 
 .sponsor:active, .sponsor:focus {
   background-color: rgb(230, 230, 230);
-  -webkit-tap-highlight-color: transparent;
 }
 
 .sponsor::selection {
