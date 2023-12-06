@@ -87,7 +87,7 @@ li {
 
 ul {
   list-style-type: circle;
-  margin: 0.5em;
+  margin: 0.5em 1em 0;
 }
 
 sub {
