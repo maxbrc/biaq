@@ -9,9 +9,9 @@ let sponsorBoss = {
 const sponsoren = document.querySelectorAll(".sponsor");
 
 for (let sponsor of sponsoren) {
-  sponsor.addEventListener('click', function() {
+  let img = sponsor.getElementsByTagName("img")[0]
+  img.addEventListener('click', function() {
     let sponsorName = sponsor.classList[1];
-    let img = sponsor.getElementsByTagName("img")[0]
     if (sponsorBoss[sponsorName]) {
       img.src = "img/" + sponsorName + ".jpg" //string template literals won't work for some reason
     } else {
