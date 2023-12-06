@@ -130,14 +130,15 @@ footer section:hover:not(.spacer)  {
   cursor: default;
 }
 
-footer section:not(.spacer) {
+footer section {
   transition: all 0.2s ease-out;
-  border-bottom: 1px solid grey;
-  padding: 2em;
+  margin: 2em;
 }
 
-footer section:last-of-type:not(.spacer) {
-  border-bottom: none;
+footer section.spacer {
+  border-bottom: 1px solid grey;
+  align-self: stretch;
+  margin: 1em 2em;
 }
 
 .footerLink {
@@ -355,14 +356,9 @@ p.miniHeading {
     flex-basis: 15%;
   }
 
-  footer section:not(.spacer)  {
-    border-bottom: none;
-    padding: 1em;
-  }
-
   footer section.spacer {
     border-right: 1px solid grey;
-    align-self: stretch;
+    border-bottom: none;
   }
 
   footer {
