@@ -222,21 +222,25 @@ p.miniHeading {
   display: inline-block;
   border: none;
   box-shadow: 0 0 1em 0 grey;
+  user-select: none;
+  transition: all 0.2s ease-out;
+}
+
+.sponsor img:hover {
+  box-shadow: 0 0 1.5em 0em grey;
+  transition: all 0.2s ease-out;
+}
+
+.sponsor img:active {
+  box-shadow: 0 0 1.5em 0.2em rgb(100, 100, 100);
+  transition: all 0.2s ease-out;
 }
 
 .sponsor:hover {
   cursor: pointer;
   transform: scale(1.02);
   transition: all 0.2s ease-out;
-  background-color: rgba(230, 230, 230, 0.7);
-}
-
-.sponsor:active, .sponsor:focus {
-  background-color: rgb(230, 230, 230);
-}
-
-.sponsor::selection {
-  background: none;
+  background-color: rgba(230, 230, 230, 0.6);
 }
 
 .button {
@@ -269,6 +273,16 @@ p.miniHeading {
 
 .sponsor.max img, .sponsor.philipp img {
   box-shadow: 0 0 1em 0.2em goldenrod;
+}
+
+.sponsor.max img:hover, .sponsor.philipp img:hover {
+  box-shadow: 0 0 1.5em 0.2em goldenrod;
+  transition: all 0.2s ease-out;
+}
+
+.sponsor.max img:active, .sponsor.philipp img:active {
+  box-shadow: 0 0 1.5em 0.2em rgb(190, 142, 18);
+  transition: all 0.2s ease-out;
 }
 
 .sponsor.max.glow .name, .sponsor.philipp.glow .name {
