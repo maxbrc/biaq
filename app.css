@@ -124,19 +124,19 @@ a {
   text-decoration: none;
 }
 
-footer section:hover {
+footer section:hover:not(.spacer)  {
   text-shadow: 0 0 0.05em black;
   transition: all 0.2s ease-out;
   cursor: default;
 }
 
-footer section {
+footer section:not(.spacer) {
   transition: all 0.2s ease-out;
   border-bottom: 1px solid grey;
   padding: 2em;
 }
 
-footer section:last-of-type {
+footer section:last-of-type:not(.spacer) {
   border-bottom: none;
 }
 
@@ -355,9 +355,14 @@ p.miniHeading {
     flex-basis: 15%;
   }
 
-  footer section {
+  footer section:not(.spacer)  {
     border-bottom: none;
     padding: 1em;
+  }
+
+  footer section.spacer {
+    border-right: 1px solid grey;
+    align-self: stretch;
   }
 
   footer {
