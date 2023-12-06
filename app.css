@@ -221,8 +221,9 @@ p.miniHeading {
   background-color: rgba(230, 230, 230, 0.7);
 }
 
-.sponsor:active {
+.sponsor:active, .sponsor:focus {
   background-color: rgb(230, 230, 230);
+  outline: none !important;
 }
 
 .button {
