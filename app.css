@@ -223,7 +223,7 @@ p.miniHeading {
 
 .sponsor:active, .sponsor:focus {
   background-color: rgb(230, 230, 230);
-  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .sponsor::selection {
