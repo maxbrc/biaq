@@ -1,0 +1,48 @@
+html {
+    font-family: 'Open Sans', sans-serif
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+nav {
+    background-color: #48cae4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5em;
+}
+
+nav a {
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 0.7em;
+    margin: 2em 1em 2em 2em;
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.1em;
+    transition: all 0.2s ease-in-out;
+}
+
+nav a:last-child {
+    margin: 2em 2em 2em 1em;
+}
+
+nav a:hover {
+    transform: translateY(-0.1em);
+    transition: all 0.2s ease-in-out;
+    background-color: #00b4d8;
+    box-shadow: 0 0.5em 0.5em -0.4em #00b4d8;
+    text-shadow: black 0 0 0.05em;
+}
+
+nav a:active {
+    background-color: #0096c7;
+    transition: all 0.1s ease-in-out;
+}

@@ -1,0 +1,161 @@
+main a.topic-container {
+    margin: 1em;
+    border: 1px solid black;
+    border-radius: 1em;
+    overflow: hidden;
+    text-align: center;
+    margin-right: 3em;
+    display: flex;
+    align-items: center;
+    transition: all 0.25s ease-out;
+}
+
+main a.kahoot {
+    flex-direction: column;
+    margin: 1em;
+}
+
+main a.topic-container:hover {
+    transform: translateX(1em);
+    transition: all 0.25s ease-out;
+}
+
+main a.topic-container.right {
+    flex-direction: row-reverse;
+    margin: 1em 1em 1em 3em;
+    transition: all 0.25s ease-out;
+}
+
+main a.topic-container.right:hover {
+    transform: translateX(-1em);
+    transition: all 0.25s ease-out;
+}
+
+main div.topic-text {
+    display: inline-block;
+    margin: 1em;
+    width: 60%;
+}
+
+section.content p.semibold {
+    font-size: 1.5em;
+}
+
+main section img {
+    width: 75%;
+    margin-bottom: 1em;
+    border-radius: 1em;
+}
+
+main a.kahoot:hover {
+    transform: translateY(1em);
+    transition: all 0.25s ease-out;
+}
+
+img.topic-img {
+    width: 40%;
+}
+
+img.kahoot {
+    width: 70%;
+    margin-top: 1em;
+    border-radius: 1em;
+}
+
+p.topic-description {
+    font-size: 0.7em;
+}
+
+p.topic-heading {
+    margin: 0.2em;
+    font-weight: 600;
+}
+
+div.topic-main {
+    font-size: 1.2em;
+    display: inline-block;
+    text-align: center;
+    margin: 0.5em;
+}
+
+p.topic-subtitle {
+    width: 80%;
+    margin: 0 auto;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+section.content p {
+    font-size: 1.3em;
+}
+
+section.content li {
+    margin-bottom: 1em;
+    margin-right: 0.5em;
+    font-size: 1.3em;
+}
+
+@media (min-width: 600px) {
+    nav {
+        justify-content: flex-start;
+    }
+
+    main section img {
+        width: 50%;
+    }
+
+    nav a {
+        margin: 1em 1.5em;
+    }
+
+    p.topic-heading {
+        font-size: 1.25em;
+    }
+
+    p.topic-description {
+        font-size: 0.75em;
+    }
+}
+
+@media (min-width: 1000px) {  
+    main section img {
+        width: 33%;
+    }
+
+    div.topic-text {
+        margin: 2em;
+    }
+
+    p.topic-heading {
+        font-size: 1.5em;
+    }
+
+    p.topic-description {
+        font-size: 1em;
+    }
+
+    img.topic-img {
+        width: 40%;
+        margin-top: 1em;
+        border-radius: 1em;
+    }
+
+    main a.topic-container, main a.topic-container.right {
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 3em;
+        display: inline-block;
+        flex-basis: calc(100% / 3);
+    }
+
+    main a.topic-container:hover, main a.topic-container.right:hover {
+        transform: translateY(1em);
+        transition: all 0.25s ease-out;
+    }
+
+    main a.kahoot {
+        flex-wrap: row;
+    }
+}

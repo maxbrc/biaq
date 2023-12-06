@@ -1,0 +1,304 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* End of CSS reset */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lato', sans-serif;
+}
+
+main {
+  margin: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 800;
+  flex-basis: 100%;
+  margin: 0.5em 0 0 0;
+}
+
+h1.biaq {
+  font-size: 3em;
+  font-weight: 900;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+li {
+  margin: 0.2em;
+}
+
+ul {
+  list-style-type: circle;
+  margin: 0.5em;
+}
+
+sub {
+  font-size: 0.5em;
+}
+
+sup {
+  font-size: 0.7em;
+  vertical-align: top;
+}
+
+footer {
+  background-color: lightgrey;
+  margin-top: 4em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer section:hover {
+  text-shadow: 0 0 0.05em black;
+  transition: all 0.2s ease-out;
+}
+
+footer section {
+  transition: all 0.2s ease-out;
+  border-bottom: 1px solid grey;
+  padding: 2em;
+}
+
+footer section:last-of-type {
+  border-bottom: none;
+}
+
+.footerLink {
+  background-color: rgb(200, 200, 200);
+  padding: 0.5em 3em;
+  margin: 0.75em;
+  color: black;
+  border-radius: 0.5em;
+  display: inline-block;
+  transition: all 0.2s ease-out;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.footerLink:hover {
+  background-color: rgb(220, 220, 220);
+  transition: all 0.2s ease-out;
+}
+
+.footerLink:active {
+  background-color: rgb(230, 230, 230);
+  transition: all 0.2s ease-out;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0 0 0.25em;
+  transition: text-shadow 2s ease-in-out;
+}
+
+.footerHeading {
+  font-size: 1.3em;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+}
+
+.footerSubject {
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin: 0.2em;
+}
+
+.sponsor {
+  margin: 3em 1em;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  flex-wrap: no-wrap;
+  flex-direction: column;
+  flex-basis: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 0.5em;
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-out;
+}
+
+.fund {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: start;
+}
+
+.fund h1 {
+  flex-basis: 100%;
+}
+
+p.miniHeading {
+  margin: 0.8em 0 0.3em 0;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.sponsor img {
+  margin: 1em;
+  width: 60%;
+  aspect-ratio: 1 / 1.5;
+  border-radius: 1em;
+  object-fit: cover;
+  display: inline-block;
+  border: none;
+  box-shadow: 0 0 1em 0 grey;
+}
+
+.sponsor:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: all 0.2s ease-out;
+  background-color: rgba(230, 230, 230, 0.7);
+}
+
+.sponsor:active {
+  background-color: rgb(230, 230, 230);
+}
+
+.button {
+  padding: 0.5em;
+  border: 1px solid grey;
+  background-color: teal;
+  margin: 1em;
+  display: inline-block;
+  color: white;
+  border-radius: 0.5em;
+}
+
+.sponsor p {
+  margin: auto;
+}
+
+.sponsor .info {
+  margin: 0.75em 0.25em;
+  display: flex;
+  flex: 1;
+}
+
+.sponsor.lennard {
+  box-shadow: 0 0 2em 0.5em pink;
+}
+
+.sponsor.philipp {
+  box-shadow: 0 0 2em 0.5em lightblue;
+}
+
+.sponsor.max img, .sponsor.philipp img {
+  box-shadow: 0 0 1em 0.2em goldenrod;
+}
+
+.sponsor.max.glow .name, .sponsor.philipp.glow .name {
+  text-shadow: 0 0 0.08em black;
+  transition: text-shadow 2s ease-in-out;
+}
+
+.sponsor.max .name, .sponsor.philipp .name {
+  font-size: 1.7em;
+  font-weight: 700;
+}
+
+.sponsor.max {
+  box-shadow: 0 0 2em 0.5em darkseagreen;
+}
+
+.sponsor.constantin {
+  box-shadow: 0 0 2em 0.5em salmon;
+}
+
+.sponsor.aaron {
+  box-shadow: 0 0 2em 0.5em plum;
+}
+
+.cash {
+  font-weight: 900;
+  font-size: 1.5em;
+  color: green;
+  display: block;
+  margin: 0 0 0.25em 0;
+}
+
+@media (min-width: 1000px) {
+  .sponsor {
+    flex-basis: 15%;
+  }
+
+  footer section {
+    border-bottom: none;
+    padding: 1em;
+  }
+
+  footer {
+    flex-direction: row;
+    align-items: center;
+  }
+}

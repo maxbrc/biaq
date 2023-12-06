@@ -1,0 +1,293 @@
+/* 
+
+   CSS Reset
+
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End of CSS Reset */
+
+h1 {
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin: 0.5em 0;
+    font-weight: 600;
+    line-height: 1.25em;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(360deg, #0096C7, #90E0EF);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer {
+    background-color: #0077B6;
+    position: static;
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 100%;
+    bottom: 0;
+    margin-top: 2em;
+    align-self: stretch;
+}
+
+footer div.footer {
+    text-align: center;
+    display: inline-block;
+}
+
+footer div.footer.content:nth-of-type(3) {
+    margin: 0 1em;
+    border-bottom: 1px solid #03045e;
+    border-top: 1px solid #03045e;
+    padding: 1em 0;
+}
+
+footer div.footer.content:nth-of-type(2) {
+    margin-top: 0;
+}
+
+footer div.footer.content:last-child {
+    margin-bottom: 2em;
+}
+
+footer div.footer.content {
+    margin: 1em;
+    transition: all 0.25s ease-in-out;
+}
+
+footer div.footer.content:hover {
+    text-shadow: 0px 0px 0.05em black;
+    transition: all 0.25s ease-in-out;
+}
+
+footer div.footer.content p.credits {
+    text-align: left;
+}
+
+footer div.footer.content.sources p.credits {
+    text-align: center;
+    line-height: 1.2em;
+}
+
+p.footer.heading {
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    font-size: 1.5em;
+    margin: 0.5em;
+}
+
+p.footer.heading.subtitle {
+    margin: 0.5em;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+div.footer.focus {
+    border: 1px solid #03045e;
+    border-radius: 1em;
+    transition: all 0.25s ease-in-out;
+    display: inline-block;
+}
+
+div.footer.head {
+    flex-basis: 90%;
+    margin: 1em;
+}
+
+div.footer.focus:hover {
+    text-shadow: 0px 0px 0.075em black;
+    transition: all 0.25s ease-in-out;
+}
+
+h3.footer.subheading {
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 1.25em;
+    margin: 0.2em;
+}
+
+.semibold {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.italic {
+    font-style: italic;
+    letter-spacing: 0.05em;
+}
+
+
+nav {
+    background-color: #48cae4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: stretch;
+}
+
+nav a, a.back {
+    font-weight: 400;
+    font-size: 1.1em;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    letter-spacing: 0.1em;
+    padding: 0.75em;
+    font-style: italic;
+    transition: all 0.20s ease-out;
+    margin: 1em 0.5em;
+}
+
+a.back {
+    margin: 1em;
+}
+
+nav a:hover, a.back:hover {
+    background-color: #00b4d8;
+    transform: translateY(-0.1em);
+    transition: all 0.20s ease-out;
+    box-shadow: 0 0.5em 0.5em -0.4em #00b4d8;
+}
+
+nav a:active, a.back:hover {
+    background-color: #0096c7;
+    transition: all 0.20s ease-out;
+}
+
+nav a.button.selected {
+    background-color: #00b4d8;
+}
+
+nav a.button.selected:hover {
+    background-color: #0096c7;
+    box-shadow: 0 0.5em 0.5em -0.3em #0096c7;
+}
+
+nav a.button.selected:active {
+    background-color: #0077b6;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    display: block;
+}
+
+a.back:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    nav {
+        justify-content: flex-start;
+    }
+
+    nav a {
+        margin: 1em 1.5em;
+    }
+}
+
+@media (min-width: 1000px) {
+    div.nav-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }    
+
+    nav a {
+        margin: 1em 2em;
+    }
+
+    footer {
+        flex-direction: row;
+ 
+    }
+
+    footer.static {
+        position: static;
+    }
+
+    main {
+        flex-direction: row;
+    }
+
+    footer div.footer.head {
+        border-bottom: 1px solid #03045e;
+        padding-bottom: 1em;
+        margin-bottom: 0;
+        flex-basis: 95%;
+    }
+
+    footer div.footer.content, footer div.footer.content:nth-of-type(3), footer div.footer.content:last-child, footer div.footer.content:nth-of-type(2) {
+        border: 0;
+        padding: 0;
+        margin: 1em;
+    }
+}
