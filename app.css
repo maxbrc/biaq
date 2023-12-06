@@ -65,24 +65,28 @@ main {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  flex-direction: column;
 }
 
 h1 {
   font-size: 2em;
   font-weight: 800;
-  flex-basis: 100%;
-  margin: 0.5em 0 0 0;
+  margin: 0.5em 0 0.5em 0;
 }
 
 h1.biaq {
   font-size: 3em;
   font-weight: 900;
   flex-basis: 100%;
-  text-align: center;
+  align-self: center;
 }
 
 li {
   margin: 0.2em;
+}
+
+b {
+  font-weight: 700;
 }
 
 ul {
@@ -118,6 +122,7 @@ a {
 footer section:hover {
   text-shadow: 0 0 0.05em black;
   transition: all 0.2s ease-out;
+  cursor: default;
 }
 
 footer section {
@@ -176,13 +181,12 @@ footer section:last-of-type {
   padding: 0.5em;
   display: flex;
   align-items: center;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
   flex-direction: column;
   flex-basis: 100%;
   border: 1px solid lightgrey;
   border-radius: 0.5em;
   text-align: center;
-  position: relative;
   transition: all 0.2s ease-out;
 }
 
@@ -290,6 +294,45 @@ p.miniHeading {
   color: green;
   display: block;
   margin: 0 0 0.25em 0;
+}
+
+.github {
+  background-color: black;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1em 0.5em;
+  border-radius: 1em;
+  padding: 0.25em 0.5em;
+  color: white;
+  letter-spacing: 0.1em;
+  transition: all 0.1s ease-out;
+}
+
+.github img {
+  background-color: inherit;
+  width: 12.5%;
+  margin: 0.5em;
+}
+
+.github span {
+  display: inline-block;
+  font-size: 1.2em;
+}
+
+.github:hover {
+  transform: translateY(-0.05em);
+  box-shadow: 0 0.2em 0.2em grey;
+  transition: all 0.1s ease-out;
+  background-color: rgb(30, 30, 30);
+}
+
+.github:active {
+  transform: translateY(0.05em);
+  box-shadow: none;
+  transition: all 0.1s ease-out;
+  background-color: rgb(15, 15, 15);
 }
 
 @media (min-width: 1000px) {
