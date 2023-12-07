@@ -63,3 +63,17 @@ table {
 html {
   font-family: 'Lato', sans-serif;
 }
+
+b, strong {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 800;
+  margin: 0.5em 0 1em 0;
+}
+
+p {
+  margin: 0.5em;
+}
