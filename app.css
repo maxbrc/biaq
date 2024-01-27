@@ -353,7 +353,7 @@ main>p {
 }
 
 .sponsor .info {
-  margin: 1em 0.25em;
+  margin: 1em 0.25em 0em;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -392,19 +392,19 @@ main>p {
   box-shadow: 0 0 1.5em 0.5em lightblue;
 }
 
-.sponsor.max img,
-.sponsor.philipp img {
+.sponsor.max > img,
+.sponsor.philipp > img {
   box-shadow: 0 0 1em 0.2em goldenrod;
 }
 
-.sponsor.max img:hover,
-.sponsor.philipp img:hover {
+.sponsor.max > img:hover,
+.sponsor.philipp > img:hover {
   box-shadow: 0 0 1.5em 0.2em goldenrod;
   transition: all 0.2s ease-out;
 }
 
-.sponsor.max img:active,
-.sponsor.philipp img:active {
+.sponsor.max > img:active,
+.sponsor.philipp > img:active {
   box-shadow: 0 0 1.5em 0.2em rgb(190, 142, 18);
   transition: all 0.2s ease-out;
 }
@@ -534,8 +534,8 @@ main>p {
   position: fixed;
   z-index: 5;
   margin: 0.5em;
-  padding: 0.5em;
-  top: 0;
+  padding: 1em;
+  top: 0em;
   left: 0;
   visibility: hidden;
   backdrop-filter: none;
@@ -550,20 +550,21 @@ main>p {
   justify-content: flex-start;
   box-shadow: 0em 0.4em 0.5em 0em grey;
   overflow: auto;
-  background-color: rgba(211, 211, 211, 0.1)
+  background-color: rgba(211, 211, 211, 0.97)
 }
 
 .x:after {
   position: fixed;
   content: "\274c";
-  top: 0;
-  right: 0;
-  margin: 0.5em;
+  font-size: 1.2em;
+  top: 0.5rem;
+  right: 0.5rem;
+  margin: 1rem;
   cursor: pointer;
 }
 
 .ddContent>img {
-  margin: 0 0 0.5em 0;
+  margin: 1em 0 0.5em 0;
   width: 60%;
   border-radius: 0.5em;
   object-fit: cover;
@@ -576,13 +577,12 @@ main>p {
   visibility: visible;
   opacity: 1;
   transition: all 0.2s ease-out;
-  backdrop-filter: blur(30px);
 }
 
 h2 {
   font-weight: 800;
   font-size: 1.4em;
-  margin: 1rem;
+  margin: 0.5rem 1rem 1rem;
   letter-spacing: 0.1rem;
 }
 
@@ -594,12 +594,11 @@ h3 {
 .infocard {
   display: flex;
   flex-direction: column;
-  margin: 0 0 0.5em 0;
   align-items: center;
 }
 
 .infocard img {
-  margin: 0.5em;
+  margin: 1em;
   width: 40%;
   border-radius: 0.5em;
   display: inline-block;
@@ -651,10 +650,11 @@ h3 {
     margin: 0;
     height: auto;
     transform: translateX(-50%) translateY(1em);
+    background: none;
   }
 
   .ddContent>img {
-    margin: 0 1.5em 0 0;
+    margin: 0 1em 0 0;
     width: 40%;
   }
 
@@ -663,9 +663,14 @@ h3 {
     transform: translateX(-50%) translateY(1em);
   }
 
+  .ddContent.first {
+    left: 100%;
+    transform: translateX(-50%) translateY(1em);
+  }
+
   .ddContent.show {
-    backdrop-filter: blur(10px);
     transform: translateX(-50%) translateY(2em);
+    backdrop-filter: blur(15px);
   }
 
   .infocard {
