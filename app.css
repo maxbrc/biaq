@@ -165,7 +165,7 @@ main {
 h1 {
   font-size: 2em;
   font-weight: 800;
-  margin: 0.5em 0 1em 0;
+  margin: 0.75em 0 0.5em;
 }
 
 h1.biaq {
@@ -177,7 +177,7 @@ h1.biaq {
 }
 
 li {
-  margin: 0.2em;
+  margin: 0.6em;
 }
 
 b {
@@ -186,6 +186,12 @@ b {
 
 ul {
   list-style-type: circle;
+  margin: 0.5em 1em 0;
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: outside;
   margin: 0.5em 1em 0;
 }
 
@@ -305,7 +311,7 @@ p.miniHeading {
 }
 
 main>p {
-  margin: 0 0.5em 0;
+  margin: 0 0.2em 0;
 }
 
 .sponsor>img {
@@ -342,9 +348,20 @@ main>p {
   border: 1px solid black;
   background-color: #00b4d8;
   margin: 0.5rem 1rem 1rem 0.5rem;
+  transition: all 0.1s ease-out;
   display: inline-block;
   border-radius: 10em;
   font-size: 1.5em;
+}
+
+.button:hover {
+  filter: brightness(105%);
+  transition: all 0.1s ease-out;
+}
+
+.button:active {
+  filter: brightness(95%);
+  transition: all 0.1s ease-out;
 }
 
 .sponsor p {
@@ -391,19 +408,19 @@ main>p {
   box-shadow: 0 0 1.5em 0.5em lightblue;
 }
 
-.sponsor.max > img,
-.sponsor.philipp > img {
+.sponsor.max>img,
+.sponsor.philipp>img {
   box-shadow: 0 0 1em 0.2em goldenrod;
 }
 
-.sponsor.max > img:hover,
-.sponsor.philipp > img:hover {
+.sponsor.max>img:hover,
+.sponsor.philipp>img:hover {
   box-shadow: 0 0 1.5em 0.2em goldenrod;
   transition: all 0.2s ease-out;
 }
 
-.sponsor.max > img:active,
-.sponsor.philipp > img:active {
+.sponsor.max>img:active,
+.sponsor.philipp>img:active {
   box-shadow: 0 0 1.5em 0.2em rgb(190, 142, 18);
   transition: all 0.2s ease-out;
 }
@@ -522,11 +539,16 @@ main>p {
 .ddHeader:hover {
   background-color: rgba(211, 211, 211, 0.2);
   transition: all 0.1s ease-out;
+  cursor: pointer;
 }
 
 .ddHeader:active {
   background-color: rgba(211, 211, 211, 0.4);
   transition: all 0.1s ease-out;
+}
+
+.general .ddHeader {
+  margin: 1em 0;
 }
 
 .ddContent {
@@ -536,6 +558,7 @@ main>p {
   padding: 1em;
   top: 0em;
   left: 0;
+  width: calc(100% - 1em);
   visibility: hidden;
   backdrop-filter: none;
   opacity: 0;
@@ -583,6 +606,7 @@ h2 {
   font-size: 1.4em;
   margin: 0.5rem 1rem 1rem;
   letter-spacing: 0.1rem;
+  text-align: center;
 }
 
 h3 {
@@ -619,9 +643,24 @@ h3 {
   flex-basis: auto;
 }
 
-/* * {
-  outline: 2px solid red;
-} */
+.download {
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  border-radius: 0.3em;
+  border: 1px solid grey;
+  transition: all 0.1s ease-out;
+  margin-bottom: -0.2em;
+}
+
+.download:hover {
+  background-color: rgba(211, 211, 211, 0.2);
+  transition: all 0.1s ease-out;
+}
+
+.download:active {
+  background-color: rgba(211, 211, 211, 0.4);
+  transition: all 0.1s ease-out;
+}
 
 @media (min-width: 1000px) {
   .sponsor {
@@ -648,6 +687,7 @@ h3 {
     top: auto;
     margin: 0;
     height: auto;
+    overflow: visible;
     transform: translateX(-50%) translateY(1em);
     background: none;
   }
@@ -686,5 +726,31 @@ h3 {
     top: 0;
     right: 0;
     margin: 0;
+  }
+
+  .general.ddWrapper {
+    width: 15%;
+    position: static;
+  }
+
+  .general .ddContent {
+    position: static;
+    width: 240%;
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    left: 0;
+    transform: none;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+  }
+
+  .general .ddContent.show {
+    opacity: 1;
+    margin: 1em 0;
+    max-height: 200px;
+    padding: 1em;
+    transition: all 0.3s ease-out;
   }
 }
