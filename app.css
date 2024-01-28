@@ -343,7 +343,6 @@ main>p {
   background-color: #00b4d8;
   margin: 0.5rem 1rem 1rem 0.5rem;
   display: inline-block;
-  color: white;
   border-radius: 10em;
   font-size: 1.5em;
 }
@@ -670,7 +669,7 @@ h3 {
 
   .ddContent.show {
     transform: translateX(-50%) translateY(2em);
-    backdrop-filter: blur(15px);
+    background-color: white;
   }
 
   .infocard {

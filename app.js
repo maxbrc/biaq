@@ -50,6 +50,8 @@ const toggleDropdown = (index) => {
   globalDropdownIndex = index;
   if (globalDropdown && window.innerWidth < 1000) {
     document.body.classList.add('no-scroll');
+  } else if (globalDropdown) {
+    ddContents[index].scrollIntoView({behaviour: 'smooth', block: 'center'});
   } else {
     document.body.classList.remove('no-scroll');
   }
