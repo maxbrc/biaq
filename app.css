@@ -157,7 +157,7 @@ body.no-scroll {
 }
 
 html {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 main {
@@ -170,7 +170,7 @@ main {
 
 h1 {
   font-size: 2em;
-  font-weight: 800;
+  font-weight: 600;
   margin: 0.75em 0 0.5em;
 }
 
@@ -187,7 +187,7 @@ li {
 }
 
 b {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 ul {
@@ -206,7 +206,7 @@ sub {
 }
 
 sup {
-  font-size: 0.7em;
+  font-size: 0.8em;
   vertical-align: top;
 }
 
@@ -235,13 +235,13 @@ footer section:hover:not(.spacer) {
 
 footer section {
   transition: all 0.2s ease-out;
-  margin: 2em;
+  margin: 2em 1em;
 }
 
 footer section.spacer {
   border-bottom: 1px solid grey;
   align-self: stretch;
-  margin: 1em 2em;
+  margin: 1em;
 }
 
 .footerLink {
@@ -275,12 +275,12 @@ footer section.spacer {
 
 .footerHeading {
   font-size: 1.3em;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.2em;
 }
 
 .footerSubject {
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.1rem;
   margin: 0.2em;
 }
@@ -313,7 +313,7 @@ footer section.spacer {
 p.miniHeading {
   margin: 1em 0 0.5em 0;
   font-size: 1.3em;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 main>p {
@@ -371,6 +371,24 @@ i {
 
 .button:active {
   filter: brightness(95%);
+  transition: all 0.1s ease-out;
+}
+
+.button.status {
+  background-color: greenyellow;
+  font-weight: 700;
+  border-radius: 1rem;
+  border: 2px solid black;
+  font-size: 1.7em;
+}
+
+.button.status:hover {
+  filter: brightness(95%);
+  transition: all 0.1s ease-out;
+}
+
+.button.status:active {
+  filter: brightness(90%);
   transition: all 0.1s ease-out;
 }
 
@@ -685,6 +703,7 @@ h3 {
   footer {
     flex-direction: row;
     align-items: center;
+    flex-wrap: nowrap;
   }
 
   .ddContent {
