@@ -49,7 +49,7 @@ const toggleDropdown = (index) => {
   globalDropdown = !globalDropdown;
   globalDropdownIndex = index;
   if (globalDropdown && window.innerWidth < 1000) {
-    document.body.classList.add('no-scroll');
+    ddContents[index].scrollIntoView({behaviour: 'smooth', block: 'start'});
   } else if (globalDropdown) {
     ddContents[index].scrollIntoView({behaviour: 'smooth', block: 'center'});
   } else {
@@ -63,10 +63,6 @@ for (let i = 0; i < ddHeaders.length; i++) {
     if (globalDropdown && globalDropdownIndex != i) {
       toggleDropdown(globalDropdownIndex);
     }
-    toggleDropdown(i);
-  });
-  x[i].addEventListener('click', (e) => {
-    e.stopPropagation();
     toggleDropdown(i);
   });
   ddContents[i].addEventListener('click', (e) => e.stopPropagation());
