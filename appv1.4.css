@@ -533,7 +533,7 @@ i {
 
 .github:hover img {
   filter: invert(1);
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .github:active span {
@@ -608,7 +608,7 @@ i {
 }
 
 .ddContent>img {
-  margin: 1em 0 0.5em 0;
+  margin: 2em 0 0.5em 0;
   width: 80%;
   border-radius: 0.5em;
   object-fit: cover;
@@ -629,7 +629,7 @@ i {
 h2 {
   font-weight: 800;
   font-size: 1.4em;
-  margin: 0.5rem 1rem 1rem;
+  margin: 0.5rem 1rem;
   letter-spacing: 0.1rem;
   text-align: center;
 }
@@ -657,14 +657,14 @@ h3 {
 .infocard .heading {
   font-size: 1.2em;
   font-weight: 700;
-  margin: 0.5em 0 1em 0;
+  margin: 1.5rem 0 0.5rem 0;
 }
 
 .part {
   border-radius: 0.5em;
   border: 1px solid grey;
   width: 70%;
-  margin: 0 0 1em 0;
+  margin: 0.5em 0;
   flex-basis: auto;
 }
 
@@ -685,6 +685,27 @@ h3 {
 .download:active {
   background-color: rgba(211, 211, 211, 0.4);
   transition: all 0.1s ease-out;
+}
+
+.general .ddContent {
+  position: static;
+  margin: 0;
+  scroll-margin: 0.8em;
+  padding: 0 1em;
+  max-height: 0;
+  display: block;
+  transform: none;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.general .ddContent.show {
+  opacity: 1;
+  margin: 1em 0;
+  padding: 1em;
+  max-height: 250px;
+  transition: all 0.3s ease-out;
 }
 
 @media (min-width: 1000px) {
@@ -717,7 +738,7 @@ h3 {
   }
 
   .ddContent>img {
-    margin: 0 1em 0 0;
+    margin: 1em 1em 0.5em 0;
     width: 40%;
   }
 
@@ -762,9 +783,9 @@ h3 {
     position: static;
     width: 240%;
     margin: 0;
-    padding: 0;
+    padding: 0 1em;
     max-height: 0;
-    left: 0;
+    display: block;
     transform: none;
     opacity: 0;
     overflow: hidden;
@@ -774,8 +795,8 @@ h3 {
   .general .ddContent.show {
     opacity: 1;
     margin: 1em 0;
-    max-height: 250px;
     padding: 1em;
+    max-height: 250px;
     transition: all 0.3s ease-out;
   }
 }

@@ -42,6 +42,13 @@ const x = document.querySelectorAll(".x");
 let globalDropdown = false;
 let globalDropdownIndex = 0;
 
+function scrollInView(element, center, obj) {
+  if (typeof element.scrollIntoViewIfNeeded === 'function') {
+    element.scrollIntoViewIfNeeded(center); // try to use this function if possible because of nicer user experience
+  } else {
+    element.scrollIntoView(obj); // only for Firefox
+  }
+}
 
 const toggleDropdown = (index) => {
   arrows[index].classList.toggle('up');
@@ -49,11 +56,9 @@ const toggleDropdown = (index) => {
   globalDropdown = !globalDropdown;
   globalDropdownIndex = index;
   if (globalDropdown && window.innerWidth < 1000) {
-    ddContents[index].scrollIntoView({behaviour: 'smooth', block: 'start'});
+    scrollInView(ddContents[index], false, {behaviour: 'smooth', block: 'start'})
   } else if (globalDropdown) {
-    ddContents[index].scrollIntoView({behaviour: 'smooth', block: 'center'});
-  } else {
-    document.body.classList.remove('no-scroll');
+    scrollInView(ddContents[index], false, {behaviour: 'smooth', block: 'center'})
   }
 }
 
