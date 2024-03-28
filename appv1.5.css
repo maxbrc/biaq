@@ -146,6 +146,7 @@ table {
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  color: white;
 }
 
 *:active {
@@ -163,6 +164,15 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+section.blur {
+  backdrop-filter: blur(30px) brightness(120%);
+  padding: 2em;
+  margin: 1em 0 1em 0;
+  border-radius: 0.5em;
+  border: 1px solid white;
+  align-self: stretch;
+}
+
 main {
   margin: 1em;
   display: flex;
@@ -174,7 +184,7 @@ main {
 h1 {
   font-size: 2em;
   font-weight: 600;
-  margin: 0.75em 0 0.5em;
+  margin: 0 0 0.5em;
 }
 
 h1.biaq {
@@ -182,7 +192,7 @@ h1.biaq {
   font-weight: 900;
   flex-basis: 100%;
   align-self: center;
-  margin: 0;
+  margin: 0 0 0.5em 0;
 }
 
 li {
@@ -214,24 +224,26 @@ sup {
 }
 
 footer {
-  background-color: lightgrey;
   margin-top: 4em;
   padding: 1em;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
+  position: relative;
   align-items: stretch;
   flex-wrap: wrap;
+  background-color: #1c1726;
+  box-shadow: 0 0 2em 1em black;
 }
 
 footer p {
   margin: 0.3em 0;
+  color: grey;
 }
 
 a {
   text-decoration: none;
-  color: black;
 }
 
 footer section:hover:not(.spacer) {
@@ -242,20 +254,25 @@ footer section:hover:not(.spacer) {
 
 footer section {
   transition: all 0.2s ease-out;
-  margin: 2em 1em;
+  margin: 1em 0em;
+
+}
+
+footer section:not(.spacer) {
+  padding: 1em;
 }
 
 footer section.spacer {
   border-bottom: 1px solid grey;
-  align-self: stretch;
   margin: 1em;
+  align-self: stretch;
 }
 
 .footerLink {
-  background-color: rgb(200, 200, 200);
   padding: 0.5em 3em;
   margin: 0.75em;
-  color: black;
+  color: lightgrey;
+  border: 1px solid lightgrey;
   border-radius: 0.5em;
   display: inline-block;
   transition: all 0.2s ease-out;
@@ -264,12 +281,12 @@ footer section.spacer {
 }
 
 .footerLink:hover {
-  background-color: rgb(220, 220, 220);
+  background-color: #b7094c;
   transition: all 0.2s ease-out;
 }
 
 .footerLink:active {
-  background-color: rgb(230, 230, 230);
+  filter: brightness(130%);
   transition: all 0.2s ease-out;
 }
 
@@ -284,26 +301,14 @@ footer section.spacer {
   font-size: 1.3em;
   font-weight: 700;
   letter-spacing: 0.2em;
+  color: lightgrey;
 }
 
 .footerSubject {
   font-weight: 600;
+  color: grey;
   letter-spacing: 0.1rem;
   margin: 0.2em;
-}
-
-.sponsor {
-  margin: 3em 1em;
-  padding: 0.5em;
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  flex-basis: 100%;
-  flex-direction: column;
-  border: 1px solid lightgrey;
-  border-radius: 0.5em;
-  text-align: center;
-  transition: all 0.1s ease-out;
 }
 
 .fund {
@@ -311,10 +316,17 @@ footer section.spacer {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: start;
+  margin: 1em 0;
+  padding: 0 0 2em 0;
+  border-radius: 0.5em;
 }
 
 .fund h1 {
   flex-basis: 100%;
+  font-size: 2.5em;
+  font-weight: 800;
+  text-align: center;
+  margin: 2rem 0 0 2rem;
 }
 
 p.miniHeading {
@@ -331,38 +343,69 @@ i {
   font-style: italic;
 }
 
-.sponsor>img {
-  margin: 1em;
-  width: 60%;
-  aspect-ratio: 1 / 1.5;
-  border-radius: 1em;
-  object-fit: cover;
+.sponsor {
+  position: relative;
+  margin: 3em 1em;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-basis: 100%;
+  flex-direction: column;
+  border: 1px solid lightgrey;
+  border-radius: 0.5em;
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+
+.sponsor::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  backdrop-filter: blur(5px) brightness(60%);
+  transition: all 0.3s ease-out;
+}
+
+.imgWrapper {
   display: inline-block;
-  border: none;
-  box-shadow: 0 0 1em 0 grey;
+  margin: 1em 1em 1.5em 1em;
+  width: 60%;
+}
+
+.sponsor .imgWrapper img {
+  width: 100%;
+  aspect-ratio: 1 / 1.5;
+  border-radius: 0.25em;
+  object-fit: cover;
   user-select: none;
-  transition: all 0.2s ease-out;
+  border: 1px dashed #f02eaa66;
+  transition: all 0.3s ease-out;
 }
 
-.sponsor>img:hover {
-  box-shadow: 0 0 1.5em 0em grey;
-  transition: all 0.2s ease-out;
-}
-
-.sponsor>img:active {
-  box-shadow: 0 0 1.5em 0.2em rgb(100, 100, 100);
-  transition: all 0.2s ease-out;
+.sponsor:hover .imgWrapper img {
+  box-shadow: #f02eaa66 2px 3px, rgba(240, 46, 170, 0.3) 4px 6px, rgba(240, 46, 170, 0.2) 6px 9px, rgba(240, 46, 170, 0.1) 8px 12px, rgba(240, 46, 170, 0.05) 10px 15px;
+  transition: all 0.3s ease-out;
+  /* by Alligator */
 }
 
 .sponsor:hover {
   cursor: pointer;
-  transition: all 0.1s ease-out;
+  transition: all 0.3s ease-out;
   border: 1px solid darkgrey;
+}
+
+.sponsor:hover::before {
+  backdrop-filter: blur(8px) brightness(60%);
+  transition: all 0.3s ease-out;
 }
 
 .button {
   padding: 1rem 2rem;
-  border: 1px solid black;
+  border: 1px solid white;
   background-color: #00b4d8;
   margin: 0.5rem 1rem 1rem 0.5rem;
   transition: all 0.1s ease-out;
@@ -384,9 +427,10 @@ i {
 .button.status {
   background-color: greenyellow;
   font-weight: 700;
-  border-radius: 1rem;
-  border: 2px solid black;
+  border-radius: 0.5rem;
+  border: 2px solid white;
   font-size: 1.7em;
+  color: black;
 }
 
 .button.status:hover {
@@ -411,53 +455,12 @@ i {
   flex: 1;
 }
 
-.sponsor a {
-  padding: 0.25em 1em;
-  margin: 1em 0 0 0;
-  display: inline-block;
-  border-radius: 1em;
-  border: 1px solid black;
-  transition: all 0.2s ease-out;
-}
-
-.sponsor a sup {
-  margin: 0.25em;
-  display: inline-block;
-}
-
-.sponsor a:hover {
-  background-color: rgba(211, 211, 211, 0.5);
-  transition: all 0.2s ease-out;
-}
-
-.sponsor a:active {
-  background-color: rgba(211, 211, 211, 0.75);
-  transition: all 0.2s ease-out;
-}
-
 .sponsor.lennard {
   box-shadow: 0 0 1.5em 0.5em pink;
 }
 
 .sponsor.philipp {
   box-shadow: 0 0 1.5em 0.5em lightblue;
-}
-
-.sponsor.max>img,
-.sponsor.philipp>img {
-  box-shadow: 0 0 1em 0.2em goldenrod;
-}
-
-.sponsor.max>img:hover,
-.sponsor.philipp>img:hover {
-  box-shadow: 0 0 1.5em 0.2em goldenrod;
-  transition: all 0.2s ease-out;
-}
-
-.sponsor.max>img:active,
-.sponsor.philipp>img:active {
-  box-shadow: 0 0 1.5em 0.2em rgb(190, 142, 18);
-  transition: all 0.2s ease-out;
 }
 
 .sponsor.max.glow .name,
@@ -494,11 +497,11 @@ i {
 
 .github {
   background-color: black;
-  display: flex;
+  display: inline-flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
-  margin: 1em 0.5em;
+  margin: 1em 0.5em 0 0.5em;
   border-radius: 1em;
   border: 2px solid black;
   padding: 0.25em 0.5em;
@@ -524,9 +527,15 @@ i {
   box-shadow: 0 0.2em 0.2em grey;
   transition: all 0.2s ease-out;
   background-color: white;
+  color: black;
 }
 
 .github:hover span {
+  color: black;
+  transition: all 0.2s ease-out;
+}
+
+.github:hover span b {
   color: black;
   transition: all 0.2s ease-out;
 }
@@ -589,14 +598,13 @@ i {
 }
 
 .general .ddHeader {
-  margin: 1em 0;
+  margin: 1em 0 0;
 }
 
 .ddContent {
-  z-index: 5;
+  z-index: 10;
   top: 0;
   left: 0;
-  backdrop-filter: none;
   border-radius: 0.5em;
   transition: all 0.2s ease-out;
   border: 1px solid darkgrey;
@@ -623,6 +631,7 @@ i {
   scroll-margin: 0.8em;
   display: flex;
   padding: 1em;
+  backdrop-filter: blur(8px);
   transition: all 0.2s ease-out;
 }
 
@@ -689,7 +698,7 @@ h3 {
 
 .general .ddContent {
   position: static;
-  margin: 0;
+  margin: 1em 0 0 0;
   scroll-margin: 0.8em;
   padding: 0 1em;
   max-height: 0;
@@ -727,13 +736,16 @@ h3 {
   .ddContent {
     position: absolute;
     flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 220%;
     left: 50%;
     top: auto;
     margin: 0;
-    box-shadow: 0em 0.4em 0.5em 0em grey;
+    padding: 1em;
+    opacity: 0;
+    visibility: hidden;
     transform: translateX(-50%) translateY(1em);
   }
 
@@ -754,8 +766,10 @@ h3 {
 
   .ddContent.show {
     transform: translateX(-50%) translateY(2em);
-    background-color: white;
     margin: 0;
+    scroll-margin: 4em;
+    opacity: 1;
+    visibility: visible;
   }
 
   .infocard {
@@ -766,7 +780,6 @@ h3 {
     flex-basis: 100%;
   }
 
-
   code {
     margin: 0.7rem;
     display: inline-block;
@@ -775,7 +788,7 @@ h3 {
   }
 
   .general.ddWrapper {
-    width: 15%;
+    width: 40%;
     position: static;
   }
 
@@ -794,9 +807,21 @@ h3 {
 
   .general .ddContent.show {
     opacity: 1;
-    margin: 1em 0;
+    margin: 1em 0 0 0;
     padding: 1em;
     max-height: 250px;
     transition: all 0.3s ease-out;
+  }
+
+  section.blur {
+    align-self: flex-start;
+  }
+
+  .fund {
+    border: 1px solid white;
+  }
+
+  .fund h1 {
+    text-align: left;
   }
 }

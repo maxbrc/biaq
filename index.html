@@ -9,54 +9,33 @@
   <title>BIAQ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  
-  <link rel="stylesheet" href="appv1.4.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="appv1.5.css">
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
 
 <body>
   <main>
     <h1 class="biaq">BIAQ</h1>
-    <h1>Coding Experience</h1>
-    Sometimes the GitHub icon looks scuffed on hover and the invert filter is lacking behind.<br>
-    If you open an incognito tab it works flawlessly. WTF
-    <h1>GitHub</h1>
-    <p>
-      If you want to contribute, hit me up.<br>
-    </p>
-    <a href="https://github.com/maxbrc/biaq">
-      <div class="github">
-        <img src="img/github.png" alt="GitHub Logo"><span>maxbrc / <b>biaq</b></span>
-      </div>
-    </a>
-    <h1>Quick Links</h1>
-    <section>
-      <a class="button status" href="https://status.biaq.de/"> ++ Status ++</a>
-      <a class="button" href="https://dashboard.biaq.de/">Dashboard</a>
-      <a class="button" href="weltmeere">Weltmeere</a>
+    <section class="blur">
+      <h1>Important Information</h1>
+      <p>The New Design is not yet finished and recommendations are welcome. It needs some touching up.</p>
     </section>
-    <h1>Intranet</h1>
-    <p>How does the BIAQ Intranet work?</p>
-    <div class="ddWrapper general">
-      <div class="ddHeader">
-        <div class="arrow"></div>
-      </div>
-      <div class="ddContent">
-        <h2>The BIAQ Intranet</h2>
-        <ul>
-        <li><a href="files/biaq-ca.pem" download="biaq-ca.pem" class="download">Download Root CA Certificate</a></li>
-        <li>Import the certificate into your devices Root CA storage,<br>
-        for that either search the internet or ask Max</li>
-        <li>Connect to the BIAQ VPN and head to intra.biaq.de for further guidance</li>
-      </ul>
-      </div>
-    </div>
+    <section class="blur">
+      <h1>Quick Links</h1>
+        <a class="button status" href="https://status.biaq.de/"> ++ Status ++</a>
+        <a class="button" href="https://dashboard.biaq.de/">Dashboard</a>
+        <a class="button" href="weltmeere">Weltmeere</a>
+      </section>
     <section class="fund">
       <h1>
         Sponsoren
       </h1>
       <div class="sponsor max" id="maxSponsorCard">
-        <img src="img/max.jpg" alt="Foto von Max">
+        <div class="imgWrapper">
+          <img src="img/max.png" alt="Foto von Max">
+        </div>
         <span class="name">Max</span>
         <sup>CEO and Server Admin</sup>
         <div class="info">
@@ -83,14 +62,16 @@
         </div>
       </div>
       <div class="sponsor philipp" id="philippSponsorCard">
-        <img src="img/philipp.jpg" alt="Foto von Philipp">
+        <div class="imgWrapper">
+          <img src="img/philipp.png" alt="Foto von Philipp">
+        </div>
         <span class="name">Philipp</span>
         <sup>Co-Founder</sup>
         <div class="info">
           <p>
             <span class="cash">180€</span>Mainboard, HDD
           </p>
-<!--           <a href="playground/philipp/"><b>Playground</b><br>
+          <!--           <a href="playground/philipp/"><b>Playground</b><br>
             <sup>/playground/philipp/</sup></a> -->
         </div>
         <div class="ddWrapper">
@@ -110,7 +91,9 @@
         </div>
       </div>
       <div class="sponsor constantin">
-        <img src="img/constantin.jpg" alt="Foto von Constantin">
+        <div class="imgWrapper">
+          <img src="img/constantin.png" alt="Foto von Constantin">
+        </div>
         <span class="name">Constantin</span>
         <sup>CFO and Lawyer</sup>
         <div class="info">
@@ -148,7 +131,9 @@
         </div>
       </div>
       <div class="sponsor aaron">
-        <img src="img/aaron.jpg" alt="Foto von Aaron">
+        <div class="imgWrapper">
+          <img src="img/aaron.png" alt="Foto von Aaron">
+        </div>
         <span class="name">Aaron</span>
         <sup>Minecraft Professional</sup>
         <div class="info">
@@ -171,7 +156,9 @@
         </div>
       </div>
       <div class="sponsor lennard">
-        <img src="img/lennard.jpg" alt="Foto von Lennard">
+        <div class="imgWrapper">
+          <img src="img/lennard.png" alt="Foto von Lennard">
+        </div>
         <span class="name">Lennard</span>
         <sup>Supreme VIP Member</sup>
         <div class="info">
@@ -193,7 +180,43 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="blur">
+      <h1>Coding Experience</h1>
+      <p>
+        Sometimes the GitHub icon looks scuffed on hover and the invert filter is lacking behind.<br>
+      </p>
+    </section>
+    <section class="blur">
+      <h1>GitHub</h1>
+      <p><b>
+        If you want to contribute, hit me up.<br>
+      </b>
+      </p>
+      <a href="https://github.com/maxbrc/biaq">
+        <div class="github">
+          <img src="img/github.png" alt="GitHub Logo"><span>maxbrc / <b>biaq</b></span>
+        </div>
+      </a>
+    </section>
+      <section class="blur">
+      <h1>Intranet</h1>
+      <p>How does the BIAQ Intranet work?</p>
+      <div class="ddWrapper general">
+        <div class="ddHeader">
+          <div class="arrow"></div>
+        </div>
+        <div class="ddContent">
+          <h2>The BIAQ Intranet</h2>
+          <ul>
+            <li><a href="files/biaq-ca.pem" download="biaq-ca.pem" class="download">Download Root CA Certificate</a></li>
+            <li>Import the certificate into your devices Root CA storage,<br>
+              for that either search the internet or ask Max</li>
+            <li>Connect to the BIAQ VPN and head to intra.biaq.de for further guidance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="blur">
       <h1>Server Setup</h1>
       <p class="miniHeading">
         Server
@@ -212,13 +235,13 @@
       <p class="miniHeading">
         Firewall
       </p>
-        <p>Dell Optiplex 3020 SFF</p>
-        <ul>
-          <li>Intel Core i5-4590</li>
-          <li>8GB DDR3</li>
-          <li>256GB SSD</li>
-          <li>Fujitsu D2745-A11 4-Port Gigabit NIC</li>
-        </ul>
+      <p>Dell Optiplex 3020 SFF</p>
+      <ul>
+        <li>Intel Core i5-4590</li>
+        <li>8GB DDR3</li>
+        <li>256GB SSD</li>
+        <li>Fujitsu D2745-A11 4-Port Gigabit NIC</li>
+      </ul>
       <p class="miniHeading">
         Networking
       </p>
@@ -242,10 +265,13 @@
         <span class="footerSubject">Code:</span> Max
       </p>
       <p>
+        <span class="footerSubject">Sick Design:</span> Max
+      </p>
+      <p>
         <span class="footerSubject">Kein Buisness Tarif:</span> Die Telekom
       </p>
       <p>
-        <span class="footerSubject">Konfetti: </span> confetti.js
+        <span class="footerSubject">Confetti: </span> confetti.js
       </p>
     </section>
     <section class="spacer"></section>
@@ -291,8 +317,9 @@
       </p>
     </section>
   </footer>
-  <script src="app.js?v=1.04"></script>
+  <script src="app.js?v=1.05"></script>
   <script src="confetti.min.js"></script>
+  <script src="bg.js"></script>
 </body>
 
 </html>

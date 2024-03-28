@@ -14,7 +14,7 @@ for (let sponsor of sponsoren) {
   img.addEventListener('click', function () {
     let sponsorName = sponsor.classList[1];
     if (sponsorBoss[sponsorName]) {
-      img.src = `img/${sponsorName}.jpg`;
+      img.src = `img/${sponsorName}.png`;
     } else {
       img.src = `img/${sponsorName}_boss.jpg`;
     }
@@ -22,7 +22,7 @@ for (let sponsor of sponsoren) {
   })
 }
 
-function glowLoop() {
+/* function glowLoop() {
   setTimeout(() => {
     sponsoren[0].classList.toggle("glow");
     sponsoren[1].classList.toggle("glow");
@@ -30,14 +30,13 @@ function glowLoop() {
   }, 2000)
 }
 
-glowLoop();
+glowLoop(); */
 
 // Dropdown Stuff //
 
 const ddHeaders = document.querySelectorAll('.ddHeader');
 const ddContents = document.querySelectorAll('.ddContent');
 const arrows = document.querySelectorAll('.arrow');
-const x = document.querySelectorAll(".x");
 
 let globalDropdown = false;
 let globalDropdownIndex = 0;
