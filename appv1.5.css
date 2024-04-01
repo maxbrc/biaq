@@ -165,7 +165,7 @@ html {
 }
 
 section.blur {
-  backdrop-filter: blur(30px) brightness(120%);
+  background-color: #1A1420;
   padding: 2em;
   margin: 1em 0 1em 0;
   border-radius: 0.5em;
@@ -192,7 +192,7 @@ h1.biaq {
   font-weight: 900;
   flex-basis: 100%;
   align-self: center;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 0.5rem 0;
 }
 
 li {
@@ -239,11 +239,15 @@ footer {
 
 footer p {
   margin: 0.3em 0;
-  color: grey;
+  color: darkgrey;
 }
 
 a {
   text-decoration: none;
+}
+
+footer sub {
+  color: darkgrey;
 }
 
 footer section:hover:not(.spacer) {
@@ -306,7 +310,7 @@ footer section.spacer {
 
 .footerSubject {
   font-weight: 600;
-  color: grey;
+  color: darkgrey;
   letter-spacing: 0.1rem;
   margin: 0.2em;
 }
@@ -316,8 +320,6 @@ footer section.spacer {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: start;
-  margin: 1em 0;
-  padding: 0 0 2em 0;
   border-radius: 0.5em;
 }
 
@@ -326,13 +328,21 @@ footer section.spacer {
   font-size: 2.5em;
   font-weight: 800;
   text-align: center;
-  margin: 2rem 0 0 2rem;
+  margin: 1rem 0 0 0;
 }
 
 p.miniHeading {
   margin: 1em 0 0.5em 0;
   font-size: 1.3em;
   font-weight: 500;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
 main>p {
@@ -345,7 +355,7 @@ i {
 
 .sponsor {
   position: relative;
-  margin: 3em 1em;
+  margin: 2em 1em;
   padding: 0.5em;
   display: flex;
   align-items: center;
@@ -356,18 +366,7 @@ i {
   border-radius: 0.5em;
   text-align: center;
   transition: all 0.3s ease-out;
-}
-
-.sponsor::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  backdrop-filter: blur(5px) brightness(60%);
-  transition: all 0.3s ease-out;
+  background-color: #1A1420;
 }
 
 .imgWrapper {
@@ -398,11 +397,6 @@ i {
   border: 1px solid darkgrey;
 }
 
-.sponsor:hover::before {
-  backdrop-filter: blur(8px) brightness(60%);
-  transition: all 0.3s ease-out;
-}
-
 .button {
   padding: 1rem 2rem;
   border: 1px solid white;
@@ -415,12 +409,12 @@ i {
 }
 
 .button:hover {
-  filter: brightness(105%);
+  filter: brightness(110%);
   transition: all 0.1s ease-out;
 }
 
 .button:active {
-  filter: brightness(95%);
+  filter: brightness(90%);
   transition: all 0.1s ease-out;
 }
 
@@ -434,12 +428,12 @@ i {
 }
 
 .button.status:hover {
-  filter: brightness(95%);
+  filter: brightness(90%);
   transition: all 0.1s ease-out;
 }
 
 .button.status:active {
-  filter: brightness(90%);
+  filter: brightness(80%);
   transition: all 0.1s ease-out;
 }
 
@@ -622,7 +616,6 @@ i {
   object-fit: cover;
   border: none;
   user-select: none;
-  box-shadow: 0 0.1em 0.4em 0 grey;
 }
 
 .ddContent.show {
@@ -631,7 +624,6 @@ i {
   scroll-margin: 0.8em;
   display: flex;
   padding: 1em;
-  backdrop-filter: blur(8px);
   transition: all 0.2s ease-out;
 }
 
@@ -701,8 +693,7 @@ h3 {
   margin: 1em 0 0 0;
   scroll-margin: 0.8em;
   padding: 0 1em;
-  max-height: 0;
-  display: block;
+  display: none;
   transform: none;
   opacity: 0;
   overflow: hidden;
@@ -713,13 +704,35 @@ h3 {
   opacity: 1;
   margin: 1em 0;
   padding: 1em;
-  max-height: 250px;
+  display: block;
   transition: all 0.3s ease-out;
 }
 
 @media (min-width: 1000px) {
+  h1.biaq {
+    margin: 0 0 2rem 0;
+  }
+
   .sponsor {
     flex-basis: 15%;
+    background: none;
+  }
+
+  .sponsor::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    backdrop-filter: blur(5px) brightness(60%);
+    transition: all 0.3s ease-out;
+  }
+
+  .sponsor:hover::before {
+    backdrop-filter: blur(8px) brightness(60%);
+    transition: all 0.3s ease-out;
   }
 
   footer section.spacer {
@@ -769,6 +782,7 @@ h3 {
     margin: 0;
     scroll-margin: 4em;
     opacity: 1;
+    backdrop-filter: blur(20px) brightness(80%);
     visibility: visible;
   }
 
@@ -815,13 +829,23 @@ h3 {
 
   section.blur {
     align-self: flex-start;
+    background: none;
+    backdrop-filter: blur(30px) brightness(120%);
   }
 
   .fund {
     border: 1px solid white;
+    margin: 1em 0;
+    padding: 0 0 2em 0;
   }
 
   .fund h1 {
+    text-align: left;
+    margin: 2rem 0 0 2rem;
+  }
+
+  .links {
+    display: block;
     text-align: left;
   }
 }

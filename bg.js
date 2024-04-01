@@ -7,7 +7,6 @@ Simple and easy to alter, thanks a lot. ~ Max
 
 */
 
-
 //create the canvas element
 let myCanvas = document.createElement("canvas");
 
