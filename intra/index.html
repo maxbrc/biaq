@@ -9,48 +9,102 @@
   <title>BIAQ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  
-  <link rel="stylesheet" href="app.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../appv1.6.css">
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
 
 <body>
   <main>
     <h1 class="biaq">BIAQ Intranet</h1>
-    <h1>Du bist drin!</h1>
-    <p class="miniHeading">Du befindest dich nun in unserem Intranet.</p>
-    <h1>Funktionen</h1>
-    <p>Die Verbindung über das VPN zu unserem Server ist besser verschlüsselt als eine einfache HTTPS Verbindung über das Internet.
-        <br>Bei aktiver VPN Verbindung müsste außerdem die Anfrage von deinem Gerät erst wieder "ins Internet" und wieder an unseren Server gehen,
-        <br>was ziemlich überflüssig ist, wenn man schon einmal mit dem Server per VPN verbunden ist.</p>
-        <br><b>Übersetzt: Verbindung mit VPN = Mit Intranet verbunden</b>
-    <p class="miniHeading">Wie kann ich es benutzen?</p>
-    <p>Es läuft stets nach folgendem Muster:<br>
-    <code>&ltservice&gt.intra.biaq.de</code></p>
-    <p>Ersetze hierbei natürlich <i>&ltservice&gt</i> nach Bedarf (z. B. nextcloud.intra.biaq.de)</p>
-    <h1>Quick Links</h1>
-    <section>
+    <section class="blur">
+      <h1>Du bist drin!</h1>
+      <p class="miniHeading notop">Du befindest dich nun in unserem Intranet.</p>
+      <h1>Funktionen</h1>
+      <p>Die Verbindung über das VPN zu unserem Server ist besser verschlüsselt als eine einfache HTTPS Verbindung über
+        das Internet.
+        <br>Bei aktiver VPN Verbindung müsste außerdem die Anfrage von deinem Gerät erst wieder "ins Internet" und
+        wieder
+        an unseren Server gehen,
+        <br>was ziemlich überflüssig ist, wenn man schon einmal mit dem Server per VPN verbunden ist.
+      </p>
+      <br><b>Übersetzt: Verbindung mit VPN = Mit Intranet verbunden</b>
+    </section>
+    <section class="blur">
+      <h1>Benutzung</h1 <p>Es läuft stets nach folgendem Muster:<br>
+      <code>&ltservice&gt.intra.biaq.de</code>
+      </p>
+      <p>Ersetze hierbei natürlich <i>&ltservice&gt</i> nach Bedarf (z. B. nextcloud.intra.biaq.de)</p>
+    </section>
+    <section class="blur links">
+      <h1>Quick Links</h1>
       <a class="button" href="https://dashboard.intra.biaq.de/">Intranet Dashboard</a>
     </section>
-    <h1>Falls etwas nicht klappt...</h1>
-    <p class="miniHeading">Einfach Max fragen</p>
-<!--     <h1>Intranet</h1>
-    <p>How does the BIAQ Intranet work?</p>
-    <div class="ddWrapper general">
-      <div class="ddHeader">
-        <div class="arrow"></div>
-      </div>
-      <div class="ddContent">
-        <div class="x"></div>
-        <h2>The BIAQ Intranet</h2>
-        <ul>
-        <li><a href="files/biaqca.pem" download="biaq-ca.pem" class="download">Download Root CA Certificate</a></li>
-        <li>Import the certificate into your devices Root CA storage,<br>
-        for that either search the internet or ask Max</li>
-        <li>Connect to the BIAQ VPN and head to intra.biaq.de for further guidance</li>
-      </ul>
-      </div>
-    </div> -->
+    <section class="blur">
+      <h1>Falls etwas nicht klappt...</h1>
+      <p class="miniHeading">Einfach Max fragen</p>
+    </section>
+  </main>
+  <footer>
+    <section>
+      <p class="footerHeading">
+        Credits
+      </p>
+      <p>
+        <span class="footerSubject">Code:</span> Max
+      </p>
+      <p>
+        <span class="footerSubject">Sick Design:</span> Max
+      </p>
+      <p>
+        <span class="footerSubject">Kein Buisness Tarif:</span> Die Telekom
+      </p>
+      <p>
+        <span class="footerSubject">Confetti: </span> confetti.js
+      </p>
+    </section>
+    <section class="spacer"></section>
+    <section>
+      <p class="footerHeading">
+        Future
+      </p>
+      <p>
+        Development of the BIAQ brand
+      </p>
+      <p>
+        Add more useful features to this website
+      </p>
+    </section>
+    <section class="spacer"></section>
+    <section>
+      <p class="footerHeading">
+        Unsere Schule und Rollen
+      </p>
+      <p class="footerSubject">
+        Gymnasium Bürgerwiese Dresden
+      </p>
+      <p>
+        <span class="footerSubject">Philipp:</span> Veranstaltungstechniker
+      </p>
+      <p>
+        <span class="footerSubject">Max:</span> Veranstaltungstechniker & App Team
+      </p>
+      <p class="footerSubject">Philipp und Max stehen im Goldenen Buch</p>
+    </section>
+    <section class="spacer"></section>
+    <section>
+      <p class="footerHeading">
+        Legal Information
+      </p>
+      <a class="footerLink" href="../impressum">Impressum</a>
+      <p>
+        <span class="footerSubject"><sub>BIAQ ist ein fiktives Werk und steht in keinster Weise mit einem realen
+            Unternehmen in Verbindung.</sub></span>
+      </p>
+    </section>
+  </footer>
+  <script src="../bg.js?v=1.01"></script>
 </body>
 
 </html>

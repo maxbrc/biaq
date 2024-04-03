@@ -54,10 +54,12 @@ const toggleDropdown = (index) => {
   ddContents[index].classList.toggle('show');
   globalDropdown = !globalDropdown;
   globalDropdownIndex = index;
-  if (globalDropdown && window.innerWidth < 1000) {
-    scrollInView(ddContents[index], false, {behaviour: 'smooth', block: 'start'})
-  } else if (globalDropdown) {
-    scrollInView(ddContents[index], false, {behaviour: 'smooth', block: 'center'})
+  if (!(ddContents[index].parentNode.classList.contains('noscroll'))) {
+    if (globalDropdown && window.innerWidth < 1000) {
+      scrollInView(ddContents[index], false, { behaviour: 'smooth', block: 'start' })
+    } else if (globalDropdown) {
+      scrollInView(ddContents[index], false, { behaviour: 'smooth', block: 'center' })
+    }
   }
 }
 

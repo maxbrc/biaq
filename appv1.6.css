@@ -153,10 +153,6 @@ table {
   -webkit-tap-highlight-color: transparent;
 }
 
-body.no-scroll {
-  overflow: hidden;
-}
-
 html {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -187,8 +183,24 @@ h1 {
   margin: 0 0 0.5em;
 }
 
+.bio section {
+  padding: 0.5em 0 2em 0;
+  margin: 1em 0 0 0;
+  border-bottom: 1px solid white;
+}
+
+.bio section:first-of-type {
+  margin: 0;
+  padding: 0 0 2em 0;
+}
+
+.bio section:last-of-type {
+  border-bottom: none;
+  padding: 0.5em 0 0 0;
+}
+
 h1.biaq {
-  font-size: 3em;
+  font-size: 4em;
   font-weight: 900;
   flex-basis: 100%;
   align-self: center;
@@ -333,6 +345,12 @@ footer section.spacer {
 
 p.miniHeading {
   margin: 1em 0 0.5em 0;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+p.miniHeading.notop {
+  margin: 0 0 0.5em 0;
   font-size: 1.3em;
   font-weight: 500;
 }
@@ -516,6 +534,10 @@ i {
   transition: all 0.2s ease-out;
 }
 
+.github span b {
+  transition: all 0.2s ease-out;
+}
+
 .github:hover {
   transform: translateY(-0.05em);
   box-shadow: 0 0.2em 0.2em grey;
@@ -640,6 +662,10 @@ h3 {
   margin: 0.5rem;
 }
 
+.bio h3 {
+  margin: 1rem 0.5rem 0.5rem 0;
+}
+
 .infocard {
   display: flex;
   flex-direction: column;
@@ -708,9 +734,15 @@ h3 {
   transition: all 0.3s ease-out;
 }
 
+.bio .ddContent {
+  border: none;
+  padding: 1em 0 0 0;
+}
+
+
 @media (min-width: 1000px) {
   h1.biaq {
-    margin: 0 0 2rem 0;
+    margin: 0 0 1rem 0;
   }
 
   .sponsor {
@@ -775,6 +807,7 @@ h3 {
   .ddContent.first {
     left: 100%;
     transform: translateX(-50%) translateY(1em);
+    width: 440%;
   }
 
   .ddContent.show {
@@ -784,6 +817,10 @@ h3 {
     opacity: 1;
     backdrop-filter: blur(20px) brightness(80%);
     visibility: visible;
+  }
+
+  .ddContent.first.show {
+    transform: translateX(-25%) translateY(2em);
   }
 
   .infocard {
@@ -847,5 +884,33 @@ h3 {
   .links {
     display: block;
     text-align: left;
+  }
+
+  .bio .ddContent {
+    max-height: unset;
+    display: none;
+    width: 250%;
+  }
+
+  .bio .ddContent.show {
+    max-height: unset;
+    display: block;
+  }
+
+  .bio section {
+    padding: 1em 1em 1.5em 1em;
+    margin: 0;
+  }
+
+  .bio section:last-of-type {
+    padding: 1em 1em 0 1em;
+  }
+
+  .bio section:first-of-type {
+    padding: 0 1em 1.5em 1em;
+  }
+
+  section.bio {
+    align-self: stretch;
   }
 }
