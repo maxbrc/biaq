@@ -900,6 +900,7 @@ h3 {
   .bio section {
     padding: 1em 1em 1.5em 1em;
     margin: 0;
+    text-align: left;
   }
 
   .bio section:last-of-type {
@@ -912,5 +913,10 @@ h3 {
 
   section.bio {
     align-self: stretch;
+    text-align: center;
+  }
+
+  .bio .ddHeader {
+    width: 250%;
   }
 }
