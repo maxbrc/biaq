@@ -1,0 +1,922 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+
+  CSS Reset
+
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+/* End of CSS reset */
+
+
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+*:active {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+section.blur {
+  background-color: #1A1420;
+  padding: 2em;
+  margin: 1em 0 1em 0;
+  border-radius: 0.5em;
+  border: 1px solid white;
+  align-self: stretch;
+}
+
+main {
+  margin: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 600;
+  margin: 0 0 0.5em;
+}
+
+.bio section {
+  padding: 0.5em 0 2em 0;
+  margin: 1em 0 0 0;
+  border-bottom: 1px solid white;
+}
+
+.bio section:first-of-type {
+  margin: 0;
+  padding: 0 0 2em 0;
+}
+
+.bio section:last-of-type {
+  border-bottom: none;
+  padding: 0.5em 0 0 0;
+}
+
+h1.biaq {
+  font-size: 4em;
+  font-weight: 900;
+  flex-basis: 100%;
+  align-self: center;
+  margin: 0 0 0.5rem 0;
+}
+
+li {
+  margin: 0.6em;
+}
+
+b {
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: circle;
+  margin: 0.5em 1em 0;
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  margin: 0.5em 1em 0;
+}
+
+sub {
+  font-size: 0.5em;
+}
+
+sup {
+  font-size: 0.8em;
+  vertical-align: top;
+}
+
+footer {
+  margin-top: 4em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  position: relative;
+  align-items: stretch;
+  flex-wrap: wrap;
+  background-color: #1c1726;
+  box-shadow: 0 0 2em 1em black;
+}
+
+footer p {
+  margin: 0.3em 0;
+  color: darkgrey;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer sub {
+  color: darkgrey;
+}
+
+footer section:hover:not(.spacer) {
+  text-shadow: 0 0 0.05em black;
+  transition: all 0.2s ease-out;
+  cursor: default;
+}
+
+footer section {
+  transition: all 0.2s ease-out;
+  margin: 1em 0em;
+
+}
+
+footer section:not(.spacer) {
+  padding: 1em;
+}
+
+footer section.spacer {
+  border-bottom: 1px solid grey;
+  margin: 1em;
+  align-self: stretch;
+}
+
+.footerLink {
+  padding: 0.5em 3em;
+  margin: 0.75em;
+  color: lightgrey;
+  border: 1px solid lightgrey;
+  border-radius: 0.5em;
+  display: inline-block;
+  transition: all 0.2s ease-out;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.footerLink:hover {
+  background-color: #b7094c;
+  transition: all 0.2s ease-out;
+}
+
+.footerLink:active {
+  filter: brightness(130%);
+  transition: all 0.2s ease-out;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0 0 0.25em;
+  transition: text-shadow 2s ease-in-out;
+}
+
+.footerHeading {
+  font-size: 1.3em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: lightgrey;
+}
+
+.footerSubject {
+  font-weight: 600;
+  color: darkgrey;
+  letter-spacing: 0.1rem;
+  margin: 0.2em;
+}
+
+.fund {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: start;
+  border-radius: 0.5em;
+}
+
+.fund h1 {
+  flex-basis: 100%;
+  font-size: 2.5em;
+  font-weight: 800;
+  text-align: center;
+  margin: 1rem 0 0 0;
+}
+
+p.miniHeading {
+  margin: 1em 0 0.5em 0;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+p.miniHeading.notop {
+  margin: 0 0 0.5em 0;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+main>p {
+  margin: 0 0.2em 0;
+}
+
+i {
+  font-style: italic;
+}
+
+.sponsor {
+  position: relative;
+  margin: 2em 1em;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-basis: 100%;
+  flex-direction: column;
+  border: 1px solid lightgrey;
+  border-radius: 0.5em;
+  text-align: center;
+  transition: all 0.3s ease-out;
+  background-color: #1A1420;
+}
+
+.imgWrapper {
+  display: inline-block;
+  margin: 1em 1em 1.5em 1em;
+  width: 60%;
+}
+
+.sponsor .imgWrapper img {
+  width: 100%;
+  aspect-ratio: 1 / 1.5;
+  border-radius: 0.25em;
+  object-fit: cover;
+  user-select: none;
+  border: 1px dashed #f02eaa66;
+  transition: all 0.3s ease-out;
+}
+
+.sponsor:hover .imgWrapper img {
+  box-shadow: #f02eaa66 2px 3px, rgba(240, 46, 170, 0.3) 4px 6px, rgba(240, 46, 170, 0.2) 6px 9px, rgba(240, 46, 170, 0.1) 8px 12px, rgba(240, 46, 170, 0.05) 10px 15px;
+  transition: all 0.3s ease-out;
+  /* by Alligator */
+}
+
+.sponsor:hover {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  border: 1px solid darkgrey;
+}
+
+.button {
+  padding: 1rem 2rem;
+  border: 1px solid white;
+  background-color: #00b4d8;
+  margin: 0.5rem 1rem 1rem 0.5rem;
+  transition: all 0.1s ease-out;
+  display: inline-block;
+  border-radius: 10em;
+  font-size: 1.5em;
+}
+
+.button:hover {
+  filter: brightness(110%);
+  transition: all 0.1s ease-out;
+}
+
+.button:active {
+  filter: brightness(90%);
+  transition: all 0.1s ease-out;
+}
+
+.button.status {
+  background-color: greenyellow;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: 2px solid white;
+  font-size: 1.7em;
+  color: black;
+}
+
+.button.status:hover {
+  filter: brightness(90%);
+  transition: all 0.1s ease-out;
+}
+
+.button.status:active {
+  filter: brightness(80%);
+  transition: all 0.1s ease-out;
+}
+
+.sponsor p {
+  margin: auto;
+}
+
+.sponsor .info {
+  margin: 1em 0.25em 0em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex: 1;
+}
+
+.sponsor.lennard {
+  box-shadow: 0 0 1.5em 0.5em pink;
+}
+
+.sponsor.philipp {
+  box-shadow: 0 0 1.5em 0.5em lightblue;
+}
+
+.sponsor.max.glow .name,
+.sponsor.philipp.glow .name {
+  text-shadow: 0 0 0.08em black;
+  transition: text-shadow 2s ease-in-out;
+}
+
+.sponsor.max .name,
+.sponsor.philipp .name {
+  font-size: 1.7em;
+  font-weight: 700;
+}
+
+.sponsor.max {
+  box-shadow: 0 0 1.5em 0.5em darkseagreen;
+}
+
+.sponsor.constantin {
+  box-shadow: 0 0 1.5em 0.5em salmon;
+}
+
+.sponsor.aaron {
+  box-shadow: 0 0 1.5em 0.5em plum;
+}
+
+.cash {
+  font-weight: 900;
+  font-size: 1.5em;
+  color: green;
+  display: block;
+  margin: 0 0 0.25em 0;
+}
+
+.github {
+  background-color: black;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1em 0.5em 0 0.5em;
+  border-radius: 1em;
+  border: 2px solid black;
+  padding: 0.25em 0.5em;
+  color: white;
+  letter-spacing: 0.1em;
+  transition: all 0.2s ease-out;
+}
+
+.github img {
+  width: 12.5%;
+  margin: 0.5em;
+  transition: all 0.2s ease-out;
+}
+
+.github span {
+  display: inline-block;
+  font-size: 1.2em;
+  transition: all 0.2s ease-out;
+}
+
+.github span b {
+  transition: all 0.2s ease-out;
+}
+
+.github:hover {
+  transform: translateY(-0.05em);
+  box-shadow: 0 0.2em 0.2em grey;
+  transition: all 0.2s ease-out;
+  background-color: white;
+  color: black;
+}
+
+.github:hover span {
+  color: black;
+  transition: all 0.2s ease-out;
+}
+
+.github:hover span b {
+  color: black;
+  transition: all 0.2s ease-out;
+}
+
+.github:hover img {
+  filter: invert(1);
+  transition: all 0.2s ease-out;
+}
+
+.github:active span {
+  text-shadow: none;
+  transition: all 0.2s ease-out;
+}
+
+.github:active {
+  transform: translateY(0.05em);
+  filter: brightness(90%);
+  box-shadow: none;
+  transition: all 0.2s ease-out;
+}
+
+.arrow {
+  padding: 0.4em;
+  max-width: 0.8em;
+  margin: 0 auto 0.2em auto;
+  border: solid grey;
+  border-width: 0 0 3px 3px;
+  transform: rotate(-45deg);
+  transform-origin: 35% 65%;
+  transition: transform 0.1s linear;
+}
+
+.arrow.up {
+  transform: rotate(135deg);
+  transition: transform 0.1s linear;
+}
+
+.ddWrapper {
+  align-self: stretch;
+  position: relative;
+}
+
+.ddHeader {
+  border: 1px solid lightgrey;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  margin: 1em;
+  transition: all 0.1s ease-out;
+}
+
+.ddHeader:hover {
+  background-color: rgba(211, 211, 211, 0.2);
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+}
+
+.ddHeader:active {
+  background-color: rgba(211, 211, 211, 0.4);
+  transition: all 0.1s ease-out;
+}
+
+.general .ddHeader {
+  margin: 1em 0 0;
+}
+
+.ddContent {
+  z-index: 10;
+  top: 0;
+  left: 0;
+  border-radius: 0.5em;
+  transition: all 0.2s ease-out;
+  border: 1px solid darkgrey;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transform: none;
+  display: none;
+}
+
+.ddContent>img {
+  margin: 2em 0 0.5em 0;
+  width: 80%;
+  border-radius: 0.5em;
+  object-fit: cover;
+  border: none;
+  user-select: none;
+}
+
+.ddContent.show {
+  opacity: 1;
+  margin: 1em 0.5em;
+  scroll-margin: 0.8em;
+  display: flex;
+  padding: 1em;
+  transition: all 0.2s ease-out;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 1.4em;
+  margin: 0.5rem 1rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 700;
+  margin: 0.5rem;
+}
+
+.bio h3 {
+  margin: 1rem 0.5rem 0.5rem 0;
+}
+
+.infocard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infocard img {
+  margin: 1em;
+  width: 40%;
+  border-radius: 0.5em;
+  display: inline-block;
+  border: none;
+  user-select: none;
+}
+
+.infocard .heading {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.part {
+  border-radius: 0.5em;
+  border: 1px solid grey;
+  width: 70%;
+  margin: 0.5em 0;
+  flex-basis: auto;
+}
+
+.download {
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  border-radius: 0.3em;
+  border: 1px solid grey;
+  transition: all 0.1s ease-out;
+  margin-bottom: -0.2em;
+}
+
+.download:hover {
+  background-color: rgba(211, 211, 211, 0.2);
+  transition: all 0.1s ease-out;
+}
+
+.download:active {
+  background-color: rgba(211, 211, 211, 0.4);
+  transition: all 0.1s ease-out;
+}
+
+.general .ddContent {
+  position: static;
+  margin: 1em 0 0 0;
+  scroll-margin: 0.8em;
+  padding: 0 1em;
+  display: none;
+  transform: none;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.general .ddContent.show {
+  opacity: 1;
+  margin: 1em 0;
+  padding: 1em;
+  display: block;
+  transition: all 0.3s ease-out;
+}
+
+.bio .ddContent {
+  border: none;
+  padding: 1em 0 0 0;
+}
+
+
+@media (min-width: 1000px) {
+  h1.biaq {
+    margin: 0 0 1rem 0;
+  }
+
+  .sponsor {
+    flex-basis: 15%;
+    background: none;
+  }
+
+  .sponsor::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    backdrop-filter: blur(5px) brightness(60%);
+    transition: all 0.3s ease-out;
+  }
+
+  .sponsor:hover::before {
+    backdrop-filter: blur(8px) brightness(60%);
+    transition: all 0.3s ease-out;
+  }
+
+  footer section.spacer {
+    border-right: 1px solid grey;
+    border-bottom: none;
+  }
+
+  footer {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .ddContent {
+    position: absolute;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 220%;
+    left: 50%;
+    top: auto;
+    margin: 0;
+    padding: 1em;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(1em);
+  }
+
+  .ddContent>img {
+    margin: 1em 1em 0.5em 0;
+    width: 40%;
+  }
+
+  .ddContent.last {
+    left: 0;
+    transform: translateX(-50%) translateY(1em);
+  }
+
+  .ddContent.first {
+    left: 100%;
+    transform: translateX(-50%) translateY(1em);
+    width: 440%;
+  }
+
+  .ddContent.show {
+    transform: translateX(-50%) translateY(2em);
+    margin: 0;
+    scroll-margin: 4em;
+    opacity: 1;
+    backdrop-filter: blur(20px) brightness(80%);
+    visibility: visible;
+  }
+
+  .ddContent.first.show {
+    transform: translateX(-25%) translateY(2em);
+  }
+
+  .infocard {
+    flex: 1 0;
+  }
+
+  h2 {
+    flex-basis: 100%;
+  }
+
+  code {
+    margin: 0.7rem;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  .general.ddWrapper {
+    width: 40%;
+    position: static;
+  }
+
+  .general .ddContent {
+    position: static;
+    width: 240%;
+    margin: 0;
+    padding: 0 1em;
+    max-height: 0;
+    display: block;
+    transform: none;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+  }
+
+  .general .ddContent.show {
+    opacity: 1;
+    margin: 1em 0 0 0;
+    padding: 1em;
+    max-height: 250px;
+    transition: all 0.3s ease-out;
+  }
+
+  section.blur {
+    align-self: flex-start;
+    background: none;
+    backdrop-filter: blur(30px) brightness(120%);
+  }
+
+  .fund {
+    border: 1px solid white;
+    margin: 1em 0;
+    padding: 0 0 2em 0;
+  }
+
+  .fund h1 {
+    text-align: left;
+    margin: 2rem 0 0 2rem;
+  }
+
+  .links {
+    display: block;
+    text-align: left;
+  }
+
+  .bio .ddContent {
+    max-height: unset;
+    display: none;
+    width: 250%;
+  }
+
+  .bio .ddContent.show {
+    max-height: unset;
+    display: block;
+  }
+
+  .bio section {
+    padding: 1em 1em 1.5em 1em;
+    margin: 0;
+    text-align: left;
+  }
+
+  .bio section:last-of-type {
+    padding: 1em 1em 0 1em;
+  }
+
+  .bio section:first-of-type {
+    padding: 0 1em 1.5em 1em;
+  }
+
+  section.bio {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .bio .ddHeader {
+    width: 250%;
+  }
+}
