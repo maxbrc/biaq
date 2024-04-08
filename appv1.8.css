@@ -207,6 +207,11 @@ h1.biaq {
   margin: 0 0 0.5rem 0;
 }
 
+.biaq img {
+  height: 1em;
+  margin: 0 1rem -0.6rem 0;
+}
+
 li {
   margin: 0.6em;
 }
