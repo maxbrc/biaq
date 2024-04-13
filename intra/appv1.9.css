@@ -202,6 +202,7 @@ h1 {
 h1.biaq {
   font-size: 4em;
   font-weight: 900;
+  letter-spacing: 0.2rem;
   flex-basis: 100%;
   align-self: center;
   margin: 0 0 0.5rem 0;
@@ -261,6 +262,12 @@ footer p {
 
 a {
   text-decoration: none;
+}
+
+footer a:not(.footerLink) {
+  border-radius: 0.2rem;
+  background-color: grey;
+  padding: 0 0.2rem;
 }
 
 footer sub {
@@ -744,6 +751,9 @@ h3 {
   padding: 1em 0 0 0;
 }
 
+.noBottomMargin {
+  margin-bottom: 0;
+}
 
 @media (min-width: 1000px) {
   h1.biaq {
