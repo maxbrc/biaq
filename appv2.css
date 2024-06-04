@@ -200,12 +200,12 @@ h1 {
 }
 
 h1.biaq {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 900;
   letter-spacing: 0.2rem;
   flex-basis: 100%;
   align-self: center;
-  margin: 0 0 0.5rem 0;
+  margin: 0;
 }
 
 .biaq img {
@@ -755,9 +755,102 @@ h3 {
   margin-bottom: 0;
 }
 
+nav {
+  margin-bottom: 2em;
+  padding: 1em;
+  text-align: center;
+  background-color: #1c1726;
+  box-shadow: 0 0 2em 1em black;
+}
+
+nav > div.navHeader {
+  height: 3.5em;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav section {
+  flex-grow: 1;
+}
+
+nav img.dropdown.ddHeader:hover {
+  border: none;
+  margin: 0.5em;
+  padding: 0;
+  background-color: unset;
+}
+
+nav .general .ddContent {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav .general .ddContent.show {
+  border: none;
+  padding: 1em;
+  margin: 1em 0 0 0;
+  border-radius: 0;
+  border-top: 1px solid grey;
+}
+
+img.dropdown {
+  height: 50%;
+  object-fit: contain;
+  box-sizing: content-box;
+}
+
+nav .ddContent section {
+  margin: 1em;
+  padding: 0 0 1em 0;
+  border-bottom: 1px solid grey;
+}
+
+img.dropdown.arrow {
+  transform: none;
+  max-width: unset;
+  transform-origin: unset;
+}
+
+img.dropdown.arrow.up {
+  transform: rotateZ(-90deg);
+}
+
+nav img.dropdown.ddHeader {
+  border: none;
+  margin: 0.5em;
+  padding: 0;
+}
+
+@media (min-width: 430px) {
+  h1.biaq {
+    font-size: 4em;
+  }
+
+  nav > div.navHeader {
+    height: 5em;
+  }
+
+  img.dropdown {
+    height: 40%;
+  }
+
+  nav img.dropdown.ddHeader {
+    margin: 1em;
+  }
+  
+  nav img.dropdown.ddHeader:hover {
+    margin: 1em;
+  }
+
+}
+
 @media (min-width: 1000px) {
   h1.biaq {
-    margin: 0 0 1rem 0;
+    margin: 0 1rem 0 1rem;
+    font-size: 3em;
   }
 
   .sponsor {
@@ -933,5 +1026,83 @@ h3 {
 
   .bio .ddHeader {
     width: 250%;
+  }
+
+  nav img.dropdown {
+    display: none;
+  }
+
+  nav {
+    margin-bottom: 2em;
+    padding: 0.5em;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: #1c1726;
+    box-shadow: 0 0 2em 1em black;
+  }
+  
+  nav > div.navHeader {
+    display: block;
+    height: auto;
+  }
+
+  nav section.links {
+    border-bottom: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav section.links h1 {
+    display: none;
+  }
+
+  nav .general .ddContent {
+    max-height: unset;
+    overflow: unset;
+    opacity: 1;
+    visibility: visible;
+    width: unset;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  nav .general.ddWrapper {
+    width: unset;
+    flex-grow: 1;
+  }
+
+  .button {
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+  }
+
+  .button.status {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 1250px) {
+  h1.biaq {
+    font-size: 4em;
+  }
+
+  nav {
+    padding: 1em;
+  }
+
+  .button {
+    font-size: 1.5em;
+  }
+
+  .button.status {
+    font-size: 1.7em;
   }
 }

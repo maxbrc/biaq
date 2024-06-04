@@ -11,19 +11,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="appv1.9.css">
+  <link rel="stylesheet" href="appv2.css">
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
 
 <body>
+  <nav>
+    <div class="navHeader">
+      <section>
+        <h1 class="biaq"><img alt="BIAQ Logo" src="img/biaq.png">BIAQ</h1>
+      </section>
+      <img class="dropdown ddHeader arrow" alt="dropdown symbol" src="img/dropdown.png">
+    </div>
+    <div class="ddWrapper general">
+      <div class="ddContent">
+        <section class="links">
+          <h1>Quick Links</h1>
+          <a class="button status" href="https://status.biaq.de/"> ++ Status ++</a>
+          <a class="button" href="https://dashboard.biaq.de/">Dashboard</a>
+          <a class="button" href="weltmeere">Weltmeere</a>
+        </section>
+        <p>Login Button dann hier.</p>
+
+      </div>
+    </div>
+  </nav>
   <main>
-    <h1 class="biaq"><img alt="BIAQ Logo" src="img/biaq.png">BIAQ</h1>
-    <section class="blur links">
-      <h1>Quick Links</h1>
-      <a class="button status" href="https://status.biaq.de/"> ++ Status ++</a>
-      <a class="button" href="https://dashboard.biaq.de/">Dashboard</a>
-      <a class="button" href="weltmeere">Weltmeere</a>
-    </section>
+
     <section class="fund">
       <h1>
         Sponsoren
@@ -156,7 +170,7 @@
           <img src="img/lennard.png" alt="Foto von Lennard">
         </div>
         <span class="name">Lennard</span>
-        <sup>Supreme VIP Member</sup>
+        <sup>Chiller</sup>
         <div class="info">
           <p>
             <span class="cash">14,99€</span>A Sushi Packet
@@ -178,7 +192,7 @@
     </section>
     <section class="blur bio">
       <h1>Was ist BIAQ? - Geschichte</h1>
-      <div class="ddWrapper general noscroll">
+      <div class="ddWrapper general">
         <div class="ddHeader">
           <div class="arrow"></div>
         </div>
@@ -322,7 +336,8 @@
             Letzendlich kam hier jedoch eine alte FRITZ!Box 7272 in Verwendung, welche aufgrund ihrer maximal 100MBit
             LAN
             Ports als Access Point eine absolute Katastrophe darstellte.
-            Diese Idee war also, wie sich schnell herausstellte, ein Schuss in den Ofen, da die Familie Bruch in jener Woche
+            Diese Idee war also, wie sich schnell herausstellte, ein Schuss in den Ofen, da die Familie Bruch in jener
+            Woche
             mit
             massiven Internetproblemen bzw. -abstürzen zu tun hatte. Es wurde mit der Einstellung des Projekts gedroht.
             Nun kommt Constantin ins Spiel. Constantin, bisher nur fern involviert und eher wenig affin mit der ganzen
@@ -429,25 +444,40 @@
           </section>
           <section>
             <h2>Phase 9: Reformation netcup</h2>
-            Im Intranet wurden alle Nutzer mit lästigen Zertifikaten und Vertrauenseinstellungen genervt. Für Constantin war der Zugriff unmöglich.
-            Mit wenig Vorwissen über Nameserver, transferierte Max die Domain biaq.de am 14. April 2024 zu dem weitaus günstigerem (und besseren) Registar netcup.
-            Auch eher weniger zufrieden mit der vorhandenen API Schnittstelle, wurde Cloudflare als Nameserver verwendet.
-            Hier konnten mit Leichtigkeit Wildcard Zertifikate für das Intranet ausgestellt werden. Auch später sollte das Ganze der Automatisierung des Mailservers zu Gute kommen.
-            Bevor aber vom Mailserver die Rede sein kann, muss erst das neue Projekt vornehmlich von Max mit Unterstützung von Constantin betrachtet werden.
+            Im Intranet wurden alle Nutzer mit lästigen Zertifikaten und Vertrauenseinstellungen genervt. Für Constantin
+            war der Zugriff unmöglich.
+            Mit wenig Vorwissen über Nameserver, transferierte Max die Domain biaq.de am 14. April 2024 zu dem weitaus
+            günstigerem (und besseren) Registar netcup.
+            Auch eher weniger zufrieden mit der vorhandenen API Schnittstelle, wurde Cloudflare als Nameserver
+            verwendet.
+            Hier konnten mit Leichtigkeit Wildcard Zertifikate für das Intranet ausgestellt werden. Auch später sollte
+            das Ganze der Automatisierung des Mailservers zu Gute kommen.
+            Bevor aber vom Mailserver die Rede sein kann, muss erst das neue Projekt vornehmlich von Max mit
+            Unterstützung von Constantin betrachtet werden.
             <h3>BIAQ Productions</h3>
-            Der schon etwas länger existierende YouTube Kanal wurde nun in englisch- und deutschsprachig aufgeteilt und erste kurze Videos wurden veröffentlicht.
-            Im Zusammenhang damit wurde nur 10 Tage später am 24. April 2024 die Top-Level-Domain biaqproductions.de erstanden.
-            Es sollte hier bis heute unter der forum.biaqproductions.de Subdomain ein Discourse Forum für Diskussionen über die Videos residieren.
+            Der schon etwas länger existierende YouTube Kanal wurde nun in englisch- und deutschsprachig aufgeteilt und
+            erste kurze Videos wurden veröffentlicht.
+            Im Zusammenhang damit wurde nur 10 Tage später am 24. April 2024 die Top-Level-Domain biaqproductions.de
+            erstanden.
+            Es sollte hier bis heute unter der forum.biaqproductions.de Subdomain ein Discourse Forum für Diskussionen
+            über die Videos residieren.
             <h3>Mailserver</h3>
-            Es wurde langsam Zeit den auslaufenden Server bei Contabo zu verlassen. Deshalb mietete Max am 3. Mai 2024 für ca. 17€ im Monat einen Server bei der bereits vertrauten netcup GmbH.
-            Das Paket RS 2000 G11 bat 8 dedizierte Kerne, 16GB DDR5 RAM, eine 512GB NVMe SSD und eine 2,5Gbit/s Anbindung. Mehr als ausreichend.
-            Der Mailserver wurde schnell ohne weitere Probleme umgezogen. Was tat man nun mit dem alten Server für die restlichen drei Monate?
-            Eine Applikation, besser gesagt ein Bundle mehrerer, namens T-Pot, bat wertvolle und spannende Einblicke in die Zu- und Angriffe die auf den alten Server stattfanden.
-            Nun wurde auch endlich das VPN reformiert. Das heißt es bat nun schnelle Geschwindigkeiten mit einem zeitgleichen Zugang zum Intranet.
+            Es wurde langsam Zeit den auslaufenden Server bei Contabo zu verlassen. Deshalb mietete Max am 3. Mai 2024
+            für ca. 17€ im Monat einen Server bei der bereits vertrauten netcup GmbH.
+            Das Paket RS 2000 G11 bat 8 dedizierte Kerne, 16GB DDR5 RAM, eine 512GB NVMe SSD und eine 2,5Gbit/s
+            Anbindung. Mehr als ausreichend.
+            Der Mailserver wurde schnell ohne weitere Probleme umgezogen. Was tat man nun mit dem alten Server für die
+            restlichen drei Monate?
+            Eine Applikation, besser gesagt ein Bundle mehrerer, namens T-Pot, bat wertvolle und spannende Einblicke in
+            die Zu- und Angriffe die auf den alten Server stattfanden.
+            Nun wurde auch endlich das VPN reformiert. Das heißt es bat nun schnelle Geschwindigkeiten mit einem
+            zeitgleichen Zugang zum Intranet.
             <h3>Florian "Scxptix" Matz</h3>
-            Ein ebenfalls technikbegeisterter Mitschüler, mit seinem Alias Scxptix, arbeitete seit Beginn des Jahres 2024 mit BIAQ zusammen.
+            Ein ebenfalls technikbegeisterter Mitschüler, mit seinem Alias Scxptix, arbeitete seit Beginn des Jahres
+            2024 mit BIAQ zusammen.
             Der BIAQ Server stellte eine weitere Schicht Sicherheit und nötige Tools bereit.
-            Sowohl der Webverkehr als auch E-Mails laufen bis heute über BIAQ und mit stetig weiteren Verbesserungen sollte diese Beziehung noch lange Zeit bestehen.
+            Sowohl der Webverkehr als auch E-Mails laufen bis heute über BIAQ und mit stetig weiteren Verbesserungen
+            sollte diese Beziehung noch lange Zeit bestehen.
           </section>
           <section>
             <h2>Phase X: Allgemeine Entwicklungen</h2>
@@ -486,15 +516,17 @@
     </section>
     <section class="blur">
       <h1>Was bietet BIAQ?</h1>
-      <p>BIAQ bietet dir die nötige Hilfe um mit deinem Server und damit auch anderen Projekten reibungslos durchzustarten.<br>
+      <p>BIAQ bietet dir die nötige Hilfe um mit deinem Server und damit auch anderen Projekten reibungslos
+        durchzustarten.<br>
         Wir bieten allerdings auch interne Services, wie:
-        <ul>
+      <ul>
         <li><b>Nextcloud</b> - Kollaborations- und Filesharing Plattform</li>
         <li><b>Bitwarden</b> - Dein Passwortmanager, selbstgehostet</li>
         <li><b>Pterodactyl</b> - Gameserver</li>
         <li><b>Mailcow</b> - Mail Server (biaq.de und andere beliebige Domains!)</li>
         <li class="noBottomMargin">Und etliche andere Services. Bei Fragen an das Leitungsteam wenden.</li>
-      </ul></p>
+      </ul>
+      </p>
     </section>
     <section class="blur">
       <h1>Coding Experience</h1>
@@ -541,6 +573,7 @@
         <li>Seasonic Focus PX-550</li>
         <li>Gigabyte B760M DS3H AX</li>
         <li>Lexar NM790 2TB Gen4 NVMe</li>
+        <li>2x Seagate FireCuda Compute 2TB HDD</li>
         <li>Western Digital Elements 2TB HDD</li>
         <li>Fractal Design Pop Air</li>
         <li>Deepcool AK620</li>
@@ -583,7 +616,7 @@
         <span class="footerSubject">Kein Buisness Tarif:</span> Die Telekom
       </p>
       <p>
-        <span class="footerSubject">Confetti: </span> <a href="https://confettijs.org/" target="_blank">confetti.js</a>
+        <span class="footerSubject">Konfetti: </span> <a href="https://confettijs.org/" target="_blank">confetti.js</a>
       </p>
     </section>
     <section class="spacer"></section>
@@ -611,6 +644,9 @@
       </p>
       <p>
         <span class="footerSubject">Max:</span> Veranstaltungstechniker & App Team
+      </p>
+      <p>
+        <span class="footerSubject">Lennard:</span> Film
       </p>
       <p class="footerSubject">Philipp und Max stehen im Goldenen Buch</p>
     </section>
