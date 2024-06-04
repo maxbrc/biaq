@@ -1039,6 +1039,7 @@ nav img.dropdown.ddHeader {
     flex-wrap: nowrap;
     align-items: center;
     background-color: #1c1726;
+    position: sticky;
     box-shadow: 0 0 2em 1em black;
   }
   
