@@ -774,7 +774,10 @@ h3 {
 nav {
   margin-bottom: 2em;
   padding: 1em;
+  position: sticky;
   text-align: center;
+  z-index: 9999;
+  top: 0;
   background-color: #1c1726;
   box-shadow: 0 0 2em 1em black;
 }
@@ -1128,7 +1131,6 @@ nav img.dropdown.ddHeader {
     font-size: 1.7em;
   }
 }
-<<<<<<< HEAD:appv2.1.css
 
 /* Loader CSS */
 
@@ -1225,5 +1227,3 @@ nav img.dropdown.ddHeader {
   transform: rotate(360deg);
 }
 }
-=======
->>>>>>> 9506ae8955976bf0d6b9d258c6625a6f4b8a42a5:appv2.css
