@@ -11,15 +11,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="appv2.css">
+  <link rel="stylesheet" href="appv2.1.css">
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
-
 <body>
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
+      </div>
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
+      </div>
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
+      </div>
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
+      </div>
+      <div class="loader-line-wrap">
+        <div class="loader-line"></div>
+      </div>
+    </div>
+  </div>
   <nav>
     <div class="navHeader">
-      <section>
-        <h1 class="biaq"><img alt="BIAQ Logo" src="img/biaq.png">BIAQ</h1>
+      <section class="biaq">
+          <img alt="BIAQ Logo" src="img/biaq.png">
+          <div>
+          <h1>BIAQ</h1>
+          <p>Build Intelligence and Quality</p>
+        </div>
       </section>
       <img class="dropdown ddHeader arrow" alt="dropdown symbol" src="img/dropdown.png">
     </div>
@@ -140,6 +162,7 @@
           </div>
         </div>
       </div>
+
       <div class="sponsor aaron">
         <div class="imgWrapper">
           <img src="img/aaron.png" alt="Foto von Aaron">
@@ -180,12 +203,36 @@
           <div class="ddHeader">
             <div class="arrow"></div>
           </div>
-          <div class="ddContent last">
+          <div class="ddContent">
             <h2>The Sushi Package</h2>
             <div class="infocard">
               <p class="heading">EAT HAPPY Mixed Box Large</p>
               <img src="img/sushi.png" alt="Sushi">
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="sponsor hannes">
+        <div class="imgWrapper">
+          <img src="img/hannes.png" alt="Foto von Hannes">
+        </div>
+        <span class="name">Hannes</span>
+        <sup>6. im Bunde</sup>
+        <div class="info">
+          <p>
+            <span class="cash">0€</span>Bisher noch nichts
+          </p>
+        </div>
+        <div class="ddWrapper">
+          <div class="ddHeader">
+            <div class="arrow"></div>
+          </div>
+          <div class="ddContent last">
+            <h2>The Empty Abyss</h2>
+<!--             <div class="infocard">
+              <p class="heading">EAT HAPPY Mixed Box Large</p>
+              <img src="img/sushi.png" alt="Sushi">
+            </div> -->
           </div>
         </div>
       </div>
@@ -618,6 +665,9 @@
       <p>
         <span class="footerSubject">Konfetti: </span> <a href="https://confettijs.org/" target="_blank">confetti.js</a>
       </p>
+      <p>
+        <span class="footerSubject">Loading: </span> <a href="https://codepen.io/jackrugile/pen/JddmaX" target="_blank">Jack Rugile</a>
+      </p>
     </section>
     <section class="spacer"></section>
     <section>
@@ -662,7 +712,7 @@
       </p>
     </section>
   </footer>
-  <script src="app.js?v=1.06"></script>
+  <script src="app.js?v=1.07"></script>
   <script src="confetti.min.js?v=1.01"></script>
   <script src="bg.js?v=1.01"></script>
 </body>
