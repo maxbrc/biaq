@@ -877,6 +877,20 @@ nav img.dropdown.ddHeader {
 }
 
 @media (min-width: 1000px) {
+  .biaq h1 {
+    font-size: 2.5rem;
+
+  }
+  
+  .biaq img {
+    height: 3rem;
+  }
+  
+  .biaq p {
+    font-size: 0.5rem;
+    margin: 0.3rem 0 0 0;
+  }
+
   .sponsor {
     flex-basis: 13%;
     background: none;
@@ -1058,7 +1072,7 @@ nav img.dropdown.ddHeader {
 
   nav {
     margin-bottom: 2em;
-    padding: 0.5em;
+    padding: 0.5em 1em;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -1115,8 +1129,18 @@ nav img.dropdown.ddHeader {
 }
 
 @media (min-width: 1250px) {
-  h1.biaq {
-    font-size: 4em;
+  .biaq h1 {
+    font-size: 3rem;
+  }
+  
+  .biaq img {
+    height: 4rem;
+    margin: 0 1rem 0 0;
+  }
+  
+  .biaq p {
+    font-size: 0.7rem;
+    margin: 0.5rem 0 0 0;
   }
 
   nav {
