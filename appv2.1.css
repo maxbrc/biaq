@@ -1060,6 +1060,7 @@ nav img.dropdown.ddHeader {
     flex-wrap: nowrap;
     align-items: center;
     background-color: #1c1726;
+    position: sticky;
     box-shadow: 0 0 2em 1em black;
   }
   
@@ -1127,6 +1128,7 @@ nav img.dropdown.ddHeader {
     font-size: 1.7em;
   }
 }
+<<<<<<< HEAD:appv2.1.css
 
 /* Loader CSS */
 
@@ -1223,3 +1225,5 @@ nav img.dropdown.ddHeader {
   transform: rotate(360deg);
 }
 }
+=======
+>>>>>>> 9506ae8955976bf0d6b9d258c6625a6f4b8a42a5:appv2.css
