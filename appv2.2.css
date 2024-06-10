@@ -325,6 +325,26 @@ footer section.spacer {
   transition: all 0.2s ease-out;
 }
 
+.button.login {
+  color: lightgrey;
+  border: 1px solid lightgrey;
+  border-radius: 0.5em;
+  transition: all 0.2s ease-out;
+  background-color: unset;
+  width: 80%;
+}
+
+.button.login:hover {
+  background-color: #b7094c;
+  transition: all 0.2s ease-out;
+  filter: none;
+}
+
+.button.login:active {
+  filter: none;
+  transition: all 0.2s ease-out;
+}
+
 .footerLink:active {
   filter: brightness(130%);
   transition: all 0.2s ease-out;
@@ -443,7 +463,7 @@ i {
   padding: 1rem 2rem;
   border: 1px solid white;
   background-color: #00b4d8;
-  margin: 0.5rem 1rem 1rem 0.5rem;
+  margin: 0.5rem 1rem;
   transition: all 0.1s ease-out;
   display: inline-block;
   border-radius: 10em;
@@ -959,7 +979,6 @@ nav img.dropdown.ddHeader {
   .ddContent.show {
     transform: translateX(-50%) translateY(2em);
     margin: 0;
-    scroll-margin: 4em;
     opacity: 1;
     backdrop-filter: blur(20px) brightness(80%);
     visibility: visible;
@@ -1182,9 +1201,7 @@ nav img.dropdown.ddHeader {
 }
 
 .loader-line-wrap {
-  animation: 
-  spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite
-;
+  animation: spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite;
   box-sizing: border-box;
   height: 50px;
   left: 0;
