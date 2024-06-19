@@ -1,0 +1,381 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+
+  CSS Reset
+
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of CSS reset */
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+*:active {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  width: 100dvw;
+}
+
+header > section {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #1c1726;
+  height: 5em;
+  padding: 1em;
+}
+
+/* BIAQ Branding */
+
+.biaq {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.biaq img {
+  width: 3em;
+  margin: 0 0.75em 0 0;
+}
+
+.biaq h1 {
+  font-size: 2.25em;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+}
+
+.biaq sub {
+  font-size: 0.5em;
+}
+
+/* Nav Dropdown */
+
+#dropdownImg img {
+  width: 2em;
+}
+
+/* Dropdown */
+/* Hidden */
+
+.ddContent {
+  display: none;
+}
+
+#dropdownImg {
+  transition: 0.1s all ease-out;
+}
+
+/* Shown */
+
+.ddContent.show {
+  display: block;
+}
+
+#dropdownImg.signal {
+  transform: rotateZ(-90deg);
+  transition: 0.1s all ease-out;
+}
+
+/* Nav */
+
+nav {
+  width: 100%;
+  background-color: #1c1726;
+  padding: 0 1em 1.5em 1em;
+}
+
+.links {
+  border-top: 1px solid grey;
+  padding: 0 0.5em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.links div {
+  align-self: stretch;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 0 0.75em 0 0;
+}
+
+/* Nav Dropdowns */
+
+nav .ddHeader {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 1.5em 0 0 0;
+}
+
+nav .ddContent {
+  margin: 0 0 0 0.5rem;
+}
+
+.arrow {
+  transform: rotateZ(-135deg);
+  width: 0.9em;
+  height: 0.9em;
+  border: 3px solid gray;
+  border-width: 0 3px 3px 0;
+  transform-origin: 65% 65%;
+  align-self: center;
+  margin: 0.2em 0 0 0;
+  transition: 0.1s all ease-out;
+}
+
+.signal .arrow {
+  transform: rotateZ(45deg);
+  transition: 0.1s all ease-out;
+}
+
+nav li *, nav li {
+  color: lightgrey;
+}
+
+nav li {
+  margin: 0.75rem 0 0.5rem 0;
+  font-size: 1.20em;
+}
+
+nav li:last-child {
+  margin: 0.75rem 0 0 0;
+}
+
+@media (min-width: 700px) {
+  .links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .links > div {
+    flex: 1 1 30%;
+  }
+
+  nav {
+    padding: 0 1em 1.25em 1em;
+  }
+
+  nav .ddHeader {
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+    padding: 0.25em 1.5em 0.25em 1em;
+    margin: 1.25em 0 0 0;
+    justify-content: center;
+  }
+
+  nav .ddContent {
+    margin: 0 0 0 1.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  #dropdownImg {
+    display: none;
+  }
+
+  nav .ddHeader {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    justify-content: flex-start;
+  }
+
+  nav.ddContent {
+    display: block;
+    padding: 0;
+    width: auto;
+    flex: 5 1 auto;
+  }
+
+  .links {
+    border: 0;
+  }
+
+  .links > div {
+    flex: 0 0 auto;
+  }
+
+  nav .ddContent {
+    position: absolute;
+  }
+
+  header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: #1c1726;;
+  }
+
+  header > section {
+    background: none;
+    flex: 1 5 20%;
+  }
+
+}
